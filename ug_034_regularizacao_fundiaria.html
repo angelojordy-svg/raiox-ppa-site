@@ -1,0 +1,439 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Raio-X PPA 2026-2029 · UG 034 — Fundo Municipal de Regularização Fundiária</title><style>
+:root {
+  --bg: #eef2f5;
+  --surface: #ffffff;
+  --surface-2: #f7f9fb;
+  --ink: #12263a;
+  --muted: #5b6b7c;
+  --line: #d7e0e8;
+  --navy: #0f2a44;
+  --navy-2: #173f63;
+  --teal: #0f766e;
+  --teal-soft: #e6f4f1;
+  --amber: #b45309;
+  --amber-soft: #fef3c7;
+  --red: #b91c1c;
+  --red-soft: #fee2e2;
+  --green: #15803d;
+  --green-soft: #dcfce7;
+  --blue: #1d4ed8;
+  --blue-soft: #dbeafe;
+  --shadow: 0 10px 30px rgba(15, 42, 68, .08);
+  --radius: 14px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Inter", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.48;
+  font-size: 15px;
+}
+a { color: var(--navy-2); }
+a:hover { color: var(--teal); }
+h1, h2, h3, h4 { line-height: 1.18; margin: 0; }
+h1 { font-size: 30px; letter-spacing: -.02em; }
+h2 { font-size: 24px; letter-spacing: -.01em; }
+h3 { font-size: 18px; }
+h4 { font-size: 14px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+p { margin: 0 0 10px; }
+ul { margin: 6px 0 10px 18px; padding: 0; }
+li { margin: 3px 0; }
+code { background: #eef2f6; padding: 1px 5px; border-radius: 5px; font-size: 12px; }
+.num { font-variant-numeric: tabular-nums; }
+.muted { color: var(--muted); }
+.small { font-size: 12.5px; }
+.tiny { font-size: 11.5px; }
+.right { text-align: right; }
+.center { text-align: center; }
+.nowrap { white-space: nowrap; }
+.wrap { max-width: 1260px; margin: 0 auto; padding: 0 24px; }
+.hero {
+  background:
+    radial-gradient(900px 320px at 12% -10%, rgba(15, 118, 110, .55), transparent 60%),
+    linear-gradient(135deg, #0b2239 0%, #123a5a 58%, #0f2a44 100%);
+  color: #fff;
+  padding: 34px 0 30px;
+  border-bottom: 1px solid rgba(255,255,255,.15);
+}
+.hero-inner { display: flex; flex-wrap: wrap; gap: 22px; align-items: flex-end; justify-content: space-between; }
+.hero-brand { display: flex; gap: 18px; align-items: center; min-width: 320px; flex: 1 1 620px; }
+.brand-mark {
+  width: 58px; height: 58px; border-radius: 16px;
+  display: grid; place-items: center;
+  background: linear-gradient(145deg, rgba(255,255,255,.22), rgba(255,255,255,.06));
+  border: 1px solid rgba(255,255,255,.26);
+  font-weight: 800; letter-spacing: .06em; font-size: 17px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.25);
+}
+.hero .eyebrow { color: #bfe3df; }
+.hero h1 { margin: 4px 0 4px; }
+.hero-sub { margin: 0; color: #d6e6ef; font-size: 15px; }
+.hero-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+.hero-meta .pill {
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.08);
+  color: #eaf3f7;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 11.5px;
+}
+.hero-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  border: 1px solid rgba(255,255,255,.28);
+  background: rgba(255,255,255,.10);
+  color: #fff; text-decoration: none;
+  padding: 9px 13px; border-radius: 10px;
+  font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+}
+.btn:hover { background: rgba(255,255,255,.18); color: #fff; }
+.btn.primary { background: #fff; color: var(--navy); border-color: #fff; }
+.btn.primary:hover { background: #eaf3f7; color: var(--navy); }
+.btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+.topbar {
+  position: sticky; top: 0; z-index: 30;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar-inner { display: flex; align-items: center; gap: 14px; min-height: 50px; overflow-x: auto; }
+.topbar a {
+  color: var(--muted); text-decoration: none; font-size: 12.5px; font-weight: 600;
+  padding: 6px 2px; white-space: nowrap;
+}
+.topbar a:hover { color: var(--navy); }
+.topbar .sep { width: 1px; height: 18px; background: var(--line); flex: 0 0 auto; }
+main.wrap { padding-top: 26px; padding-bottom: 40px; }
+.eyebrow {
+  display: block; text-transform: uppercase; letter-spacing: .14em;
+  font-size: 10.5px; font-weight: 800; color: var(--teal);
+  margin-bottom: 6px;
+}
+.section { margin: 30px 0 38px; scroll-margin-top: 76px; }
+.section-head { margin-bottom: 16px; max-width: 920px; }
+.section-head p { color: var(--muted); margin: 6px 0 0; }
+.grid { display: grid; gap: 14px; }
+.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.kpi-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.kpi {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 15px 16px; box-shadow: var(--shadow);
+  border-top: 3px solid var(--navy-2);
+  min-height: 104px;
+}
+.kpi.teal { border-top-color: var(--teal); }
+.kpi.amber { border-top-color: var(--amber); }
+.kpi.red { border-top-color: var(--red); }
+.kpi.green { border-top-color: var(--green); }
+.kpi-label { display: block; color: var(--muted); font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+.kpi-value { display: block; font-size: 25px; line-height: 1.12; margin-top: 6px; letter-spacing: -.02em; }
+.kpi-hint { display: block; color: var(--muted); font-size: 11.5px; margin-top: 6px; }
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 16px; box-shadow: var(--shadow);
+}
+.card.flat { box-shadow: none; }
+.card h3 { margin-bottom: 8px; }
+.card h4 { margin: 14px 0 8px; }
+.badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  border-radius: 999px; padding: 3px 8px;
+  font-size: 10.5px; font-weight: 800; letter-spacing: .02em;
+  border: 1px solid transparent; white-space: nowrap;
+}
+.badge.ok { background: var(--green-soft); color: #14532d; border-color: #bbf7d0; }
+.badge.warn { background: var(--amber-soft); color: #78350f; border-color: #fde68a; }
+.badge.bad { background: var(--red-soft); color: #7f1d1d; border-color: #fecaca; }
+.badge.info { background: var(--blue-soft); color: #1e3a8a; border-color: #bfdbfe; }
+.badge.muted { background: #eef2f6; color: #475569; border-color: #e2e8f0; }
+.badge.accent { background: var(--teal-soft); color: #115e59; border-color: #99f6e4; }
+.badge.pending { background: #f1f5f9; color: #64748b; border-color: #e2e8f0; }
+.pending { color: #6b7a89; font-style: italic; }
+.note {
+  background: var(--surface-2); border: 1px solid var(--line); border-left: 4px solid var(--teal);
+  border-radius: 10px; padding: 12px 14px; color: #334155; font-size: 13px;
+}
+.note.warn { border-left-color: var(--amber); background: #fffbeb; }
+.note.bad { border-left-color: var(--red); background: #fef2f2; }
+.note.info { border-left-color: var(--blue); background: #eff6ff; }
+.note strong { color: var(--ink); }
+.alert {
+  background: var(--surface); border: 1px solid var(--line); border-left: 5px solid var(--muted);
+  border-radius: 10px; padding: 11px 13px; margin: 8px 0;
+  break-inside: avoid;
+}
+.alert.alta { border-left-color: var(--red); background: #fffafa; }
+.alert.media { border-left-color: var(--amber); background: #fffdf7; }
+.alert.baixa { border-left-color: #64748b; }
+.alert.info { border-left-color: var(--blue); background: #fbfdff; }
+.alert-head { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 4px; }
+.alert p { margin: 2px 0 0; font-size: 13px; }
+.bars { display: grid; gap: 8px; }
+.bar-row { display: grid; grid-template-columns: minmax(150px, 1.25fr) minmax(120px, 2fr) auto; gap: 10px; align-items: center; }
+.bar-label { font-size: 12.5px; line-height: 1.2; overflow: visible; text-overflow: clip; white-space: normal; overflow-wrap: anywhere; }
+.bar-track { height: 9px; background: #e8eef3; border-radius: 999px; overflow: hidden; }
+.bar-fill { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--teal), #2dd4bf); }
+.bar-fill.neg { background: linear-gradient(90deg, var(--red), #f87171); }
+.bar-value { font-size: 12px; font-weight: 700; text-align: right; white-space: nowrap; }
+.stack { display: flex; height: 18px; border-radius: 999px; overflow: hidden; background: #e8eef3; border: 1px solid var(--line); }
+.stack span { display: block; height: 100%; }
+.stack .s1 { background: #0f766e; }
+.stack .s2 { background: #f59e0b; }
+.stack .s3 { background: #64748b; }
+.stack .s4 { background: #b91c1c; }
+.legend { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; font-size: 11.5px; color: var(--muted); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+.table-block { margin: 12px 0 18px; }
+.table-tools { display: flex; gap: 8px; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-bottom: 8px; }
+.table-tools input {
+  width: min(360px, 100%); border: 1px solid var(--line); border-radius: 9px;
+  padding: 8px 10px; font: inherit; font-size: 13px; background: #fff;
+}
+.table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+table.table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+table.table th {
+  text-align: left; background: #f1f5f9; color: #334155; font-size: 10.5px;
+  text-transform: uppercase; letter-spacing: .06em; padding: 8px 9px;
+  border-bottom: 1px solid var(--line); white-space: nowrap;
+}
+table.table th[data-sort] { cursor: pointer; user-select: none; }
+table.table th[data-sort]:hover { color: var(--teal); }
+table.table td { padding: 8px 9px; border-bottom: 1px solid #edf2f6; vertical-align: top; }
+table.table tbody tr:last-child td { border-bottom: 0; }
+table.table tbody tr:hover { background: #fbfdff; }
+table.table td.right, table.table th.right { text-align: right; }
+table.table td.center, table.table th.center { text-align: center; }
+table.table td.nowrap { white-space: nowrap; }
+.cell-title { font-weight: 700; color: var(--ink); }
+.cell-note { display: block; color: var(--muted); font-size: 11px; margin-top: 3px; }
+.detalhe { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; margin: 12px 0; }
+.detalhe > summary { cursor: pointer; padding: 10px 12px; font-weight: 700; color: var(--navy); list-style: none; }
+.detalhe > summary::-webkit-details-marker { display: none; }
+.detalhe[open] > summary { border-bottom: 1px solid var(--line); }
+.detalhe .table-block { margin: 0; padding: 0 12px 12px; }
+.empty {
+  border: 1px dashed var(--line); border-radius: 10px; padding: 14px;
+  color: var(--muted); background: var(--surface-2); font-size: 13px;
+}
+.programa {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow); margin: 12px 0 18px; overflow: hidden;
+  scroll-margin-top: 76px;
+}
+.programa > summary {
+  list-style: none; cursor: pointer; padding: 15px 16px;
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto; gap: 12px; align-items: center;
+  background: linear-gradient(180deg, #fff, #fbfdff);
+  border-bottom: 1px solid transparent;
+}
+.programa[open] > summary { border-bottom-color: var(--line); }
+.programa > summary::-webkit-details-marker { display: none; }
+.prog-id {
+  font-weight: 800; font-size: 13px; color: #fff; background: var(--navy-2);
+  padding: 6px 8px; border-radius: 8px; font-variant-numeric: tabular-nums;
+}
+.prog-heading h3 { font-size: 17px; margin: 0 0 4px; }
+.prog-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+.prog-value { text-align: right; min-width: 126px; }
+.prog-value strong { display: block; font-size: 17px; }
+.prog-value span { color: var(--muted); font-size: 11px; }
+.prog-toggle { color: var(--muted); font-size: 20px; width: 26px; text-align: center; transition: transform .15s ease; }
+.programa[open] .prog-toggle { transform: rotate(180deg); }
+.prog-body { padding: 16px; }
+.ficha { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-bottom: 12px; }
+.ficha div { background: var(--surface-2); border: 1px solid var(--line); border-radius: 9px; padding: 9px 10px; }
+.ficha span { display: block; color: var(--muted); font-size: 10.5px; text-transform: uppercase; letter-spacing: .06em; }
+.ficha strong { display: block; font-size: 12.5px; margin-top: 3px; }
+.objetivo { background: var(--surface-2); border: 1px solid var(--line); border-radius: 9px; padding: 11px 12px; margin: 10px 0 12px; font-size: 13px; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; margin: 8px 0 4px; }
+.panel { background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 12px; margin-top: 12px; }
+.panel h4 { margin-top: 0; }
+.mini-kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin: 10px 0; }
+.mini { background: #fff; border: 1px solid var(--line); border-radius: 9px; padding: 9px 10px; }
+.mini span { display: block; color: var(--muted); font-size: 10.5px; text-transform: uppercase; letter-spacing: .05em; }
+.mini strong { display: block; font-size: 15px; margin-top: 3px; }
+.exec-compact { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; margin-top: 12px; font-size: 12.5px; }
+.exec-compact strong { color: var(--ink); }
+.exec-compact a { margin-left: auto; font-weight: 700; }
+table.table tr.group-row td { background: #e8eef3; font-weight: 800; color: var(--navy); border-top: 1px solid var(--line); }
+.two-col { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.ug-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.ug-card {
+  display: flex; flex-direction: column; gap: 7px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 12px; color: var(--ink); text-decoration: none; min-height: 150px;
+  box-shadow: 0 4px 14px rgba(15,42,68,.04);
+}
+.ug-card.active { border-color: #5eead4; box-shadow: 0 0 0 1px #5eead4, 0 8px 22px rgba(15,118,110,.12); }
+.ug-card.disabled { opacity: .78; }
+.ug-card:hover { border-color: var(--teal); }
+.ug-card .ug-code { font-size: 11px; font-weight: 800; color: var(--teal); letter-spacing: .08em; }
+.ug-card .ug-name { font-weight: 700; font-size: 13px; line-height: 1.25; min-height: 34px; }
+.ug-card .ug-value { font-size: 16px; font-weight: 800; }
+.ug-card .ug-meta { color: var(--muted); font-size: 11px; }
+.ug-card .ug-bar { height: 6px; background: #e8eef3; border-radius: 999px; overflow: hidden; margin-top: auto; }
+.ug-card .ug-bar span { display: block; height: 100%; background: var(--teal); }
+.ug-card .ug-foot { display: flex; justify-content: space-between; gap: 6px; align-items: center; font-size: 10.5px; color: var(--muted); }
+.insights { display: grid; gap: 8px; }
+.insight { display: flex; gap: 9px; align-items: flex-start; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+.insight .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); margin-top: 6px; flex: 0 0 auto; }
+.toc { display: flex; gap: 6px; flex-wrap: wrap; }
+.toc a { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 5px 9px; font-size: 11.5px; text-decoration: none; color: var(--muted); }
+.toc a:hover { color: var(--teal); border-color: var(--teal); }
+.filters { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 10px 0 14px; }
+.filters input { border: 1px solid var(--line); border-radius: 9px; padding: 9px 11px; font: inherit; font-size: 13px; min-width: 280px; }
+.chip-btn { border: 1px solid var(--line); background: #fff; color: var(--muted); border-radius: 999px; padding: 7px 11px; font: inherit; font-size: 12px; font-weight: 700; cursor: pointer; }
+.chip-btn.ativo, .chip-btn:hover { color: var(--teal); border-color: var(--teal); background: var(--teal-soft); }
+.footer { border-top: 1px solid var(--line); padding: 22px 0 40px; color: var(--muted); font-size: 11.5px; }
+.footer strong { color: var(--ink); }
+.print-only { display: none; }
+@media (max-width: 1040px) {
+  .kpi-grid, .ug-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-4, .ficha, .mini-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 680px) {
+  .wrap { padding: 0 14px; }
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+  .kpi-grid, .ug-grid, .grid-2, .grid-3, .grid-4, .ficha, .mini-kpis, .two-col { grid-template-columns: 1fr; }
+  .programa > summary { grid-template-columns: auto minmax(0, 1fr) auto; }
+  .prog-value { display: none; }
+  .bar-row { grid-template-columns: 1fr; gap: 3px; }
+  .bar-value { text-align: left; }
+  .filters input { min-width: 100%; }
+}
+@media print {
+  @page { size: A4; margin: 13mm 12mm 14mm; }
+  html, body { background: #fff !important; color: #111; font-size: 9.5pt; }
+  .no-print, .topbar, .hero-actions, .table-tools, .btn, .filters { display: none !important; }
+  .wrap { max-width: none; padding: 0; }
+  .hero {
+    background: #fff !important; color: #111 !important;
+    border-bottom: 2px solid #0f2a44; padding: 0 0 10px;
+  }
+  .hero .eyebrow { color: #0f766e; }
+  .hero-sub { color: #333; }
+  .hero-meta .pill { border: 1px solid #aaa; background: #fff; color: #111; }
+  .brand-mark { background: #0f2a44; color: #fff; border: 0; }
+  .section { margin: 12pt 0; }
+  .section-head { margin-bottom: 8pt; }
+  .section-head h2 { font-size: 14pt; }
+  .kpi-grid { grid-template-columns: repeat(4, 1fr); gap: 6pt; }
+  .kpi { box-shadow: none; border: 1px solid #bbb; break-inside: avoid; min-height: 0; }
+  .kpi-value { font-size: 16pt; }
+  .card, .alert, .note, .insight { box-shadow: none; break-inside: avoid; }
+  .programa { border: 1px solid #bbb; box-shadow: none; break-inside: auto; }
+  .programa > summary { break-after: avoid; }
+  .section-head { break-after: avoid; }
+  .programa > summary { cursor: default; }
+  .programa .prog-body { display: block !important; }
+  details > * { display: block !important; }
+  .table-wrap { overflow: visible; border-color: #bbb; }
+  table.table { font-size: 7.8pt; }
+  table.table th { font-size: 6.8pt; padding: 4pt 5pt; }
+  table.table td { padding: 4pt 5pt; }
+  thead { display: table-header-group; }
+  tr { break-inside: avoid; }
+  .bar-fill, .stack span, .badge, .ug-bar span { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a { color: #111; text-decoration: none; }
+  .print-only { display: block; }
+  .pagebreak { break-before: page; }
+  #execucao, #analise, #evidencias, #alertas { break-before: page; }
+  .hide-print { display: none !important; }
+}
+</style></head><body><header class="hero"><div class="wrap hero-inner"><div class="hero-brand"><div class="brand-mark">UG 034</div><div><span class="eyebrow">Prefeitura Municipal de Parauapebas · Planejamento e Controle</span><h1>Raio-X Técnico do PPA 2026-2029</h1><p class="hero-sub">UG 034 — Fundo Municipal de Regularização Fundiária · diagnóstico completo do 1º ano</p><div class="hero-meta"><span class="pill">PPA 2026-2029</span><span class="pill">Contas: despesas_programas_2026_0101-1711.xlsx</span><span class="pill">Gerado em 17/11/2026 13:00</span><span class="pill">versão 0.1.0</span></div></div></div><div class="hero-actions no-print"><a class="btn" href="index.html">Índice</a><button class="btn primary" type="button" data-print>Imprimir / PDF</button><a class="btn" href="pdf/ug_034_regularizacao_fundiaria.pdf">Baixar PDF</a></div></div></header><nav class="topbar no-print"><div class="wrap topbar-inner"><a href="#resumo">Resumo</a><span class="sep"></span><a href="#programas">Programas</a><span class="sep"></span><a href="#execucao">Execução</a><span class="sep"></span><a href="#analise">Análise</a><span class="sep"></span><a href="#evidencias">Evidências</a><span class="sep"></span><a href="#alertas">Alertas</a><span class="sep"></span><a href="#metodologia">Metodologia</a></div></nav><main class="wrap"><div class="kpi-grid"><div class="kpi teal"><span class="kpi-label">Programas</span><strong class="kpi-value num">1</strong><span class="kpi-hint">sem programa compartilhado</span></div><div class="kpi teal"><span class="kpi-label">Indicadores</span><strong class="kpi-value num">2</strong><span class="kpi-hint">referência atual e 2029; sem meta anual</span></div><div class="kpi teal"><span class="kpi-label">Ações</span><strong class="kpi-value num">2</strong><span class="kpi-hint">meta 2026 do PPA</span></div><div class="kpi green"><span class="kpi-label">Liquidado 2026</span><strong class="kpi-value num">R$ 24,6 mil</strong><span class="kpi-hint">0,0% do total municipal</span></div><div class="kpi"><span class="kpi-label">UOs</span><strong class="kpi-value num">1</strong><span class="kpi-hint">subseções por unidade orçamentária</span></div><div class="kpi"><span class="kpi-label">Resultados</span><strong class="kpi-value num">0/4</strong><span class="kpi-hint">resultados de 2026 informados</span></div><div class="kpi amber"><span class="kpi-label">Sem indicador</span><strong class="kpi-value num">0</strong><span class="kpi-hint">programa(s) próprio(s)</span></div><div class="kpi red"><span class="kpi-label">Sem execução</span><strong class="kpi-value num">0</strong><span class="kpi-hint">programa(s) próprio(s)</span></div></div><section id="resumo" class="section"><div class="section-head"><span class="eyebrow">Leitura da UG</span><h2>Resumo — Fundo Municipal de Regularização Fundiária</h2><p>Indicadores, ações, execução e alertas da UG. O detalhamento completo está nos cartões de programa.</p></div><div class="insights"><div class="insight"><span class="dot"></span><span>O programa 6079 — Titula Já! concentra R$ 24,6 mil (100,0% da UG).</span></div><div class="insight"><span class="dot"></span><span>A UO Fundo Municipal de Regularização Fundiária responde por R$ 24,6 mil (100,0% da UG).</span></div><div class="insight"><span class="dot"></span><span>Resultados 2026: 0 de 4 indicadores/ações informados (0,0%).</span></div><div class="insight"><span class="dot"></span><span>Metas de ação: 2 de 2 usam percentual do plano, não meta física anual.</span></div><div class="insight"><span class="dot"></span><span>Participação no total liquidado do município: 0,0% (R$ 24,6 mil de R$ 2,03 bi).</span></div></div></section><section id="programas" class="section"><div class="section-head"><span class="eyebrow">Diagnóstico</span><h2>Programas do PPA</h2><p>Cada programa traz ficha, indicadores, ações do PPA e a execução LOA por projeto/atividade e natureza.</p></div><div class="filters no-print"><input id="busca-programa" type="search" placeholder="Buscar programa, indicador ou ação..." aria-label="Buscar programa"><button class="chip-btn ativo" type="button" data-filtro-programa="todos">Todos</button><button class="chip-btn" type="button" data-filtro-programa="sem-execucao">Sem execução</button><button class="chip-btn" type="button" data-filtro-programa="sem-indicador">Sem indicador</button><button class="chip-btn" type="button" data-filtro-programa="compartilhado">Compartilhado</button><button class="btn ghost" type="button" data-expandir="abrir">Expandir programas</button><span class="small muted" id="contador-programas"></span></div><details class="programa" id="prog-6079" data-codigo="6079" data-status="com-execucao" data-busca="6079 TITULA JA!"><summary><span class="prog-id">6079</span><span class="prog-heading"><h3>Titula Já!</h3><span class="prog-badges"></span></span><span class="prog-value"><strong class="num">R$ 24,6 mil</strong><span>100,0% da UG · 7 linhas</span></span><span class="prog-toggle" aria-hidden="true">⌄</span></summary><div class="prog-body"><div class="ficha"><div><span>Eixo</span><strong>Avanço Social</strong></div><div><span>Tipo</span><strong>Duração Continuada</strong></div><div><span>Natureza</span><strong>Finalístico</strong></div><div><span>Período</span><strong>01/01/2026 - 31/12/2029</strong></div><div><span>Órgão no PPA</span><strong>FUNDO MUNICIPAL DE REGULARIZAÇÃO FUNDIÁRIA</strong></div><div><span>Público-alvo</span><strong>Administração Pública em Geral e Munícipes</strong></div></div><div class="objetivo"><strong>Objetivo:</strong> Regularizar e ordenar as áreas públicas e de domínio municipal, garantindo a atualização e confecção de projetos de regularização fundiária para as áreas consolidadas, por meio de transferência, registro e emissão de títulos definitivos de imóveis públicos.</div><div class="chips"><span class="badge muted">2 indicador(es)</span><span class="badge muted">2 ação(ões)</span><span class="badge info">2 meta(s) percentual(is)</span><span class="badge ok">0 meta(s) física(s)</span></div><div class="panel"><h4>Indicadores do programa</h4><div class="table-block"><div class="table-tools no-print"><input type="search" data-busca-tabela="ind-6079" placeholder="Buscar indicador..." aria-label="Buscar indicador..."></div><div class="table-wrap"><table class="table table-compact" id="ind-6079" data-sortable><thead><tr><th class="center" data-sort>Nº</th><th class="left" data-sort>Indicador</th><th class="right" data-sort>Referência atual</th><th class="right" data-sort>Resultado 2026</th><th class="right" data-sort>Referência 2029</th><th class="center" data-sort>Direção</th><th class="center" data-sort>Tendência</th><th class="center" data-sort>Status</th><th class="center" data-sort>Evidência</th></tr></thead><tbody><tr><td class="center" data-value="1"><strong>1</strong></td><td class="left"><span class="cell-title">Nº de Emissão de Certidão de Uso e Ocupação do Solo</span><span class="cell-note">Sistema de Gestão Administrativa (SEMURB)</span></td><td class="right">302</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right">900</td><td class="center">↑ Aumentar</td><td class="center"><span class="badge pending">A apurar</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="2"><strong>2</strong></td><td class="left"><span class="cell-title">Nº de Laudos de Alinhamento Realizados</span><span class="cell-note">Sistema de Gestão Administrativa (SEMURB)</span></td><td class="right">402</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right">1.200</td><td class="center">↑ Aumentar</td><td class="center"><span class="badge pending">A apurar</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr></tbody></table></div></div></div><div class="panel"><h4>Ações do programa</h4><div class="table-block"><div class="table-tools no-print"><input type="search" data-busca-tabela="acao-6079" placeholder="Buscar ação..." aria-label="Buscar ação..."></div><div class="table-wrap"><table class="table table-compact" id="acao-6079" data-sortable><thead><tr><th class="center" data-sort>Nº</th><th class="left" data-sort>Ação</th><th class="right" data-sort>Meta 2026</th><th class="right" data-sort>Meta 2027-2029</th><th class="right" data-sort>Resultado 2026</th><th class="right" data-sort>% da meta</th><th class="center" data-sort>Status</th><th class="center" data-sort>Evidência</th></tr></thead><tbody><tr><td class="center" data-value="248"><strong>248</strong></td><td class="left"><span class="cell-title">Manutenção do Fundo de Regularização Fundiária - FMRF</span><span class="cell-note">Atividade · Atividades e Ações Realizadas e Mantidas</span></td><td class="right"><span class="badge info">25% do plano</span><span class="cell-note">total 4 anos: 100%</span></td><td class="right">75 %</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right" data-value=""><span class="pending">—</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="248-A"><strong>248-A</strong></td><td class="left"><span class="cell-title">Regularização Fundiária e Ambiental da Faixa Periurbana do Município de Parauapebas</span><span class="cell-note">Atividade · Atividades e Ações Realizadas e Mantidas</span></td><td class="right"><span class="badge info">25% do plano</span><span class="cell-note">total 4 anos: 100%</span></td><td class="right">75 %</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right" data-value=""><span class="pending">—</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr></tbody></table></div></div></div><div class="exec-compact"><span>Liquidado <strong>R$ 24.600,00</strong></span><span>100,0% da UG</span><span>100,0% do programa</span><span>7 linhas</span><span>Principal UO: Fundo Municipal de Regularização Fundiária (R$ 24,6 mil)</span><a href="#loa-6079">Ver execução LOA</a></div><div class="panel" id="loa-6079"><h4>Execução LOA — projeto/atividade e natureza</h4><p class="small muted">Código da ação orçamentária (projeto/atividade) e sua natureza/elemento. Não há crosswalk com a ação do PPA; o elo disponível é o programa.</p><div class="table-block"><div class="table-tools no-print"><input type="search" data-busca-tabela="loa-detalhe-6079" placeholder="Buscar natureza ou ação..." aria-label="Buscar natureza ou ação..."></div><div class="table-wrap"><table class="table table-compact" id="loa-detalhe-6079" data-sortable><thead><tr><th class="left" data-sort>Natureza / Elemento</th><th class="right" data-sort>Liquidado</th><th class="right" data-sort>% da ação</th><th class="right" data-sort>% do programa</th><th class="right" data-sort>% da UG</th><th class="right" data-sort>Linhas</th></tr></thead><tbody><tr class="group-row"><td colspan="6"><span class="badge muted">Código P/A 2.310</span> <strong>Manutenção do Fundo de Regularização Fundiária - FMRF</strong> · total R$ 24.600,00 · 100,0% do programa · 100,0% da UG</td></tr><tr><td class="left"><strong>3.3.90.39.00</strong><span class="cell-note">Outros serviços de terceiros — pessoa jurídica</span></td><td class="right" data-value="24600.0">R$ 24.600,00</td><td class="right" data-value="100.0">100,0%</td><td class="right" data-value="100.0">100,0%</td><td class="right" data-value="100.0">100,0%</td><td class="right" data-value="7">7</td></tr></tbody></table></div></div></div></div></details></section><section id="execucao" class="section"><div class="section-head"><span class="eyebrow">Execução orçamentária</span><h2>Execução 2026 da UG</h2><p>Visão da UG por programa, UO, fonte e mês. O detalhe por ação LOA/projeto-atividade e natureza está no cartão do programa.</p></div><div class="mini-kpis"><div class="mini"><span>Liquidado</span><strong>R$ 24.600,00</strong></div><div class="mini"><span>Realizado</span><strong>R$ 24.600,00</strong></div><div class="mini"><span>Anulado</span><strong>R$ 0,00</strong></div><div class="mini"><span>Linhas</span><strong>7</strong></div></div><div class="card" style="margin-top:12px"><h3>Por programa do PPA</h3><div class="table-block"><div class="table-tools no-print"><input type="search" data-busca-tabela="tabela-programas-ug" placeholder="Buscar programa..." aria-label="Buscar programa..."></div><div class="table-wrap"><table class="table " id="tabela-programas-ug" data-sortable><thead><tr><th class="left" data-sort>Código</th><th class="left" data-sort>Programa</th><th class="right" data-sort>Liquidado</th><th class="right" data-sort>% da UG</th><th class="right" data-sort>Linhas</th><th class="center" data-sort>Situação</th></tr></thead><tbody><tr><td class="nowrap"><a href="#prog-6079"><strong>6079</strong></a></td><td class="left">Titula Já!</td><td class="right" data-value="24600.0">R$ 24.600,00</td><td class="right" data-value="100.0">100,0%</td><td class="right" data-value="7">7</td><td class="center"><span class="badge ok">Com execução</span></td></tr></tbody></table></div></div></div><div class="note" style="margin-top:12px"><strong>UO única:</strong> Fundo Municipal de Regularização Fundiária · R$ 24.600,00 (100,0% da UG) · 7 linhas.</div><div class="note" style="margin-top:12px"><strong>Detalhamento:</strong> a execução por ação LOA (projeto/atividade) e natureza/elemento está no cartão de cada programa, junto às ações do PPA.</div><div class="grid grid-2" style="margin-top:12px"><div class="card"><h3>Evolução mensal</h3><div class="bars"><div class="bar-row"><div class="bar-label" title="nov/26">nov/26</div><div class="bar-track"><span class="bar-fill" style="width:100.00%"></span></div><div class="bar-value num">R$ 8,6 mil</div></div><div class="bar-row"><div class="bar-label" title="ago/26">ago/26</div><div class="bar-track"><span class="bar-fill" style="width:46.51%"></span></div><div class="bar-value num">R$ 4,0 mil</div></div><div class="bar-row"><div class="bar-label" title="mai/26">mai/26</div><div class="bar-track"><span class="bar-fill" style="width:46.51%"></span></div><div class="bar-value num">R$ 4,0 mil</div></div><div class="bar-row"><div class="bar-label" title="out/26">out/26</div><div class="bar-track"><span class="bar-fill" style="width:46.51%"></span></div><div class="bar-value num">R$ 4,0 mil</div></div><div class="bar-row"><div class="bar-label" title="set/26">set/26</div><div class="bar-track"><span class="bar-fill" style="width:46.51%"></span></div><div class="bar-value num">R$ 4,0 mil</div></div></div></div><div class="card"><h3>Por fonte de recurso</h3><div class="table-block"><div class="table-tools no-print"><input type="search" data-busca-tabela="tabela-fontes" placeholder="Buscar fonte..." aria-label="Buscar fonte..."></div><div class="table-wrap"><table class="table table-compact" id="tabela-fontes" data-sortable><thead><tr><th class="left" data-sort>Fonte de recurso</th><th class="right" data-sort>Liquidado</th><th class="right" data-sort>% da UG</th></tr></thead><tbody><tr><td class="left"><strong>17080000</strong><span class="cell-note">Transferência de compensação financeira por recursos minerais</span></td><td class="right" data-value="24600.0">R$ 24.600,00</td><td class="right" data-value="100.0">100,0%</td></tr></tbody></table></div></div></div></div><div class="note warn" style="margin-top:12px"><strong>Nota:</strong> a base é de liquidações. O valor exibido é o liquidado líquido (realizado + anulados negativos). Empenhado e pago não estão no Consolidado.</div></section><section id="analise" class="section"><div class="section-head"><span class="eyebrow">Análise crítica</span><h2>Destaques, dificuldades, riscos e recomendações</h2><p>Dificuldades, riscos e recomendações a partir dos alertas da base; a análise qualitativa é preenchida pela UG na devolutiva.</p></div><div class="grid grid-2"><div class="card"><h3>Análise qualitativa (a preencher pela UG)</h3><p><strong>Destaques:</strong> principais entregas, resultados e boas práticas.</p><p><strong>Dificuldades:</strong> restrições, atrasos e causas.</p><p><strong>Riscos:</strong> riscos de não atingir a referência de 2029.</p><p><strong>Recomendações:</strong> próximos passos, parcerias e correções.</p></div><div class="card"><h3>Dificuldades identificadas na base</h3><ul><li>4 indicador(es)/ação(ões) sem resultado 2026 informado; a análise qualitativa depende da devolutiva da UG.</li></ul></div><div class="card"><h3>Riscos</h3><ul><li>Nenhum risco alto ou médio registrado na base.</li></ul></div><div class="card"><h3>Recomendações</h3><ul><li>Solicitar a meta física anual (ou o resultado em % do plano) das ações com meta percentual.</li><li>Priorizar a coleta de resultados, análises e evidências dos itens pendentes.</li><li>Validar o mapa PPA órgão→UG e os códigos oficiais das UOs.</li></ul></div></div><div class="card" style="margin-top:12px"><h3>Análises registradas na camada de resultados</h3><div class="empty">Nenhuma análise qualitativa registrada. Preencher na devolutiva da UG.</div></div></section><section id="evidencias" class="section"><div class="section-head"><span class="eyebrow">Qualidade da informação</span><h2>Resultados e evidências</h2><p>A qualidade das evidências só é avaliável depois da devolutiva das UGs. O checklist completo por programa está na planilha de apoio.</p></div><div class="grid grid-4"><div class="kpi teal"><span class="kpi-label">Itens</span><strong class="kpi-value num">4</strong><span class="kpi-hint">indicadores + ações</span></div><div class="kpi"><span class="kpi-label">Com resultado</span><strong class="kpi-value num">0</strong><span class="kpi-hint">resultados 2026 informados</span></div><div class="kpi green"><span class="kpi-label">Evidências</span><strong class="kpi-value num">0</strong><span class="kpi-hint">arquivos/links registrados</span></div><div class="kpi amber"><span class="kpi-label">Pendentes</span><strong class="kpi-value num">4</strong><span class="kpi-hint">dependem da devolutiva</span></div></div><div class="card" style="margin-top:12px"><h3>Orientação</h3><p>Nenhum resultado de 2026 foi informado na base. O protótipo mostra <strong>Aguardando devolutiva</strong> em cada indicador e ação.</p><p>Quando a coleta for preenchida, o raio-x aceita resultados, análise, status, justificativa, próximos passos e IDs de evidência. Evidências obrigatórias para resultados críticos e metas não atingidas.</p><p>Não incluir dados pessoais ou informações sigilosas nas evidências (LGPD).</p><p class="small muted">Pasta de entrada: <code>PMP_DATA_ROOT/Saida/raiox/entrada</code></p></div><div class="card" style="margin-top:12px"><h3>Evidências registradas</h3><div class="empty">Nenhuma evidência registrada.</div></div></section><section id="alertas" class="section"><div class="section-head"><span class="eyebrow">Exceções e riscos</span><h2>Alertas da UG</h2><p>Programas sem execução, sem indicador, compartilhados, metas percentuais, vínculos provisórios e resultados pendentes.</p></div><div class="grid grid-3"><div class="kpi red"><span class="kpi-label">Alta</span><strong class="kpi-value num">0</strong><span class="kpi-hint">exigem justificativa</span></div><div class="kpi amber"><span class="kpi-label">Média</span><strong class="kpi-value num">0</strong><span class="kpi-hint">conferir na validação</span></div><div class="kpi"><span class="kpi-label">Info</span><strong class="kpi-value num">3</strong><span class="kpi-hint">contexto e pendências</span></div></div><div style="margin-top:12px"><h4>Informação · 3</h4><div class="alert info"><div class="alert-head"><span class="badge info">Info</span><strong>2 de 2 ações usam meta percentual do plano, não meta física anual. A coleta deve informar a meta anual ou o resultado em % do plano.</strong></div></div><div class="alert info"><div class="alert-head"><span class="badge info">Info</span><strong>Nenhum resultado de indicador ou ação foi informado para esta UG; o raio-x está em modo de prévia.</strong></div></div><div class="alert info"><div class="alert-head"><span class="badge info">Info</span><strong>Nenhuma evidência registrada para esta UG.</strong></div></div></div></section><section id="qualidade" class="section"><div class="section-head"><span class="eyebrow">Notas técnicas</span><h2>Qualidade dos dados</h2><p>Limitações que afetam a leitura e devem ser resolvidas antes da versão final.</p></div><div class="grid grid-2"><div class="note warn"><strong>UO:</strong> o código da unidade orçamentária no Consolidado não é único. A UG 004, por exemplo, tem duas UOs com código 001. O raio-x usa o nome normalizado da UO como chave e exibe o código apenas como referência.</div><div class="note warn"><strong>Meta das ações:</strong> 277 de 306 ações usam meta 2026 em percentual do plano (ex.: 25%), não em quantidade física. O raio-x classifica a meta e não calcula execução física contra percentual sem a meta anual informada.</div><div class="note warn"><strong>Execução:</strong> o Consolidado é de liquidações (Valor R$), com anulados negativos. Empenhado e pago não estão disponíveis nesta base. O raio-x mostra liquidado líquido.</div><div class="note info"><strong>Resultados:</strong> 0 de 553 indicadores/ações têm resultado 2026 na base. O protótipo usa placeholders; a camada de resultados pode ser alimentada por CSV/XLSX.</div></div></section><section id="metodologia" class="section"><div class="section-head"><span class="eyebrow">Método</span><h2>Como o raio-x foi calculado</h2></div><div class="grid grid-2"><div class="card"><h3>Fontes e chaves</h3><p><strong>PPA 2026-2029:</strong> abas Programas, Indicadores e Ações. O código do programa é a chave dos indicadores e das ações.</p><p><strong>Contas 2026:</strong> <code>despesas_programas_2026_0101-1711.xlsx</code>, aba Consolidado. O vínculo PPA↔contas é o campo <strong>Programa de governo</strong>. Não há vínculo automático entre a ação do PPA e a ação da LOA; a ação LOA é exibida pelo código de <strong>Projeto/Atividade</strong>.</p><p><strong>UO:</strong> a chave é o nome normalizado da unidade orçamentária; o código do Consolidado é exibido como referência e pode se repetir.</p></div><div class="card"><h3>Regras de leitura</h3><p><strong>Execução:</strong> liquidado líquido = valores realizados + anulados (negativos). Não inclui empenhado ou pago. O detalhamento por ação da LOA (projeto/atividade) e natureza/elemento está no cartão de cada programa.</p><p><strong>Indicadores:</strong> o PPA traz referência atual e referência 2029, sem meta anual. A direção é inferida pela variação entre as referências; a tendência compara o resultado com a referência atual.</p><p><strong>Ações:</strong> a meta 2026 pode ser percentual do plano ou quantidade. O % da meta só é calculado quando a meta e o resultado são compatíveis.</p><p><strong>Compartilhados:</strong> o dono é provisório (mapa do DEFINICAO do RAM); cada UG mostra sua parte e o total do programa.</p></div><div class="card"><h3>Escopo desta versão da UG 034</h3><p>Protótipo interno, independente do RAM. Não importa o código nem os artefatos do RAM. A camada de resultados/evidências é opcional e fica em <code>PMP_DATA_ROOT/Saida/raiox/entrada</code>.</p><p>O PDF pode ser gerado pela impressão do HTML no navegador. O raio-x não substitui o RAM oficial nem o resumo executivo de contas.</p></div><div class="card"><h3>Limites e pendências</h3><p>Validar o mapa PPA órgão→UG dos programas sem execução; confirmar o dono e o rateio dos programas compartilhados; obter a fonte de empenhado/pago; definir a meta física anual das ações com meta percentual; validar os resultados e as evidências com as UGs.</p></div></div></section></main><footer class="footer"><div class="wrap"><strong>Raio-X Técnico do PPA 2026-2029</strong> · produto interno da equipe técnica. Não substitui o RAM nem o resumo executivo de contas. Gerado por pmp_raiox 0.1.0.</div></footer><script>
+(function () {
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var normalizar = function (s) {
+    return (s || '').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  };
+  $$('[data-print]').forEach(function (b) {
+    b.addEventListener('click', function () { window.print(); });
+  });
+  var expandir = $('[data-expandir]');
+  if (expandir) {
+    expandir.addEventListener('click', function () {
+      var abrir = expandir.getAttribute('data-expandir') === 'abrir';
+      $$('details.programa').forEach(function (d) { d.open = abrir; });
+      expandir.setAttribute('data-expandir', abrir ? 'recolher' : 'abrir');
+      expandir.textContent = abrir ? 'Recolher programas' : 'Expandir programas';
+    });
+  }
+  var busca = $('#busca-programa');
+  var filtros = $$('[data-filtro-programa]');
+  function aplicarFiltros() {
+    var termo = normalizar(busca ? busca.value : '');
+    var ativo = 'todos';
+    filtros.forEach(function (b) { if (b.classList.contains('ativo')) ativo = b.getAttribute('data-filtro-programa'); });
+    var visiveis = 0;
+    $$('details.programa').forEach(function (d) {
+      var alvo = normalizar((d.getAttribute('data-busca') || '') + ' ' + d.textContent);
+      var status = (d.getAttribute('data-status') || '').split(' ');
+      var okTermo = !termo || alvo.indexOf(termo) >= 0;
+      var okStatus = ativo === 'todos' || status.indexOf(ativo) >= 0;
+      var mostrar = okTermo && okStatus;
+      d.hidden = !mostrar;
+      if (mostrar) visiveis += 1;
+      if (mostrar && termo.length >= 2) d.open = true;
+    });
+    var contador = $('#contador-programas');
+    if (contador) contador.textContent = visiveis + ' programa(s)';
+  }
+  if (busca) busca.addEventListener('input', aplicarFiltros);
+  filtros.forEach(function (b) {
+    b.addEventListener('click', function () {
+      filtros.forEach(function (x) { x.classList.remove('ativo'); });
+      b.classList.add('ativo');
+      aplicarFiltros();
+    });
+  });
+  aplicarFiltros();
+  $$('input[data-busca-tabela]').forEach(function (input) {
+    var tabela = document.getElementById(input.getAttribute('data-busca-tabela'));
+    if (!tabela) return;
+    input.addEventListener('input', function () {
+      var termo = normalizar(input.value);
+      $$('tbody tr', tabela).forEach(function (tr) {
+        tr.hidden = !!termo && normalizar(tr.textContent).indexOf(termo) < 0;
+      });
+    });
+  });
+  $$('table[data-sortable] th[data-sort]').forEach(function (th) {
+    th.addEventListener('click', function () {
+      var tabela = th.closest('table');
+      var tbody = tabela.tBodies[0];
+      var idx = Array.prototype.indexOf.call(th.parentNode.children, th);
+      var dir = th.getAttribute('data-dir') === 'asc' ? -1 : 1;
+      th.setAttribute('data-dir', dir === 1 ? 'asc' : 'desc');
+      var linhas = Array.prototype.slice.call(tbody.rows);
+      linhas.sort(function (a, b) {
+        var ca = a.cells[idx], cb = b.cells[idx];
+        var va = ca ? (ca.getAttribute('data-value') || ca.textContent.trim()) : '';
+        var vb = cb ? (cb.getAttribute('data-value') || cb.textContent.trim()) : '';
+        var na = parseFloat(String(va).replace(/\./g, '').replace(',', '.'));
+        var nb = parseFloat(String(vb).replace(/\./g, '').replace(',', '.'));
+        if (!isNaN(na) && !isNaN(nb)) return (na - nb) * dir;
+        return String(va).localeCompare(String(vb), 'pt-BR') * dir;
+      });
+      linhas.forEach(function (l) { tbody.appendChild(l); });
+    });
+  });
+  function abrirHash() {
+    if (!location.hash) return;
+    var el = document.querySelector(location.hash);
+    if (el && el.tagName === 'DETAILS') el.open = true;
+  }
+  window.addEventListener('hashchange', abrirHash);
+  abrirHash();
+  window.addEventListener('beforeprint', function () {
+    $$('details').forEach(function (d) { d.open = true; });
+  });
+})();
+</script></body></html>

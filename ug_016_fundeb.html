@@ -1,0 +1,439 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Raio-X PPA 2026-2029 · UG 016 — Fundo de Manutenção e Desenvolvimento da Educação Básica — FUNDEB</title><style>
+:root {
+  --bg: #eef2f5;
+  --surface: #ffffff;
+  --surface-2: #f7f9fb;
+  --ink: #12263a;
+  --muted: #5b6b7c;
+  --line: #d7e0e8;
+  --navy: #0f2a44;
+  --navy-2: #173f63;
+  --teal: #0f766e;
+  --teal-soft: #e6f4f1;
+  --amber: #b45309;
+  --amber-soft: #fef3c7;
+  --red: #b91c1c;
+  --red-soft: #fee2e2;
+  --green: #15803d;
+  --green-soft: #dcfce7;
+  --blue: #1d4ed8;
+  --blue-soft: #dbeafe;
+  --shadow: 0 10px 30px rgba(15, 42, 68, .08);
+  --radius: 14px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Inter", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.48;
+  font-size: 15px;
+}
+a { color: var(--navy-2); }
+a:hover { color: var(--teal); }
+h1, h2, h3, h4 { line-height: 1.18; margin: 0; }
+h1 { font-size: 30px; letter-spacing: -.02em; }
+h2 { font-size: 24px; letter-spacing: -.01em; }
+h3 { font-size: 18px; }
+h4 { font-size: 14px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+p { margin: 0 0 10px; }
+ul { margin: 6px 0 10px 18px; padding: 0; }
+li { margin: 3px 0; }
+code { background: #eef2f6; padding: 1px 5px; border-radius: 5px; font-size: 12px; }
+.num { font-variant-numeric: tabular-nums; }
+.muted { color: var(--muted); }
+.small { font-size: 12.5px; }
+.tiny { font-size: 11.5px; }
+.right { text-align: right; }
+.center { text-align: center; }
+.nowrap { white-space: nowrap; }
+.wrap { max-width: 1260px; margin: 0 auto; padding: 0 24px; }
+.hero {
+  background:
+    radial-gradient(900px 320px at 12% -10%, rgba(15, 118, 110, .55), transparent 60%),
+    linear-gradient(135deg, #0b2239 0%, #123a5a 58%, #0f2a44 100%);
+  color: #fff;
+  padding: 34px 0 30px;
+  border-bottom: 1px solid rgba(255,255,255,.15);
+}
+.hero-inner { display: flex; flex-wrap: wrap; gap: 22px; align-items: flex-end; justify-content: space-between; }
+.hero-brand { display: flex; gap: 18px; align-items: center; min-width: 320px; flex: 1 1 620px; }
+.brand-mark {
+  width: 58px; height: 58px; border-radius: 16px;
+  display: grid; place-items: center;
+  background: linear-gradient(145deg, rgba(255,255,255,.22), rgba(255,255,255,.06));
+  border: 1px solid rgba(255,255,255,.26);
+  font-weight: 800; letter-spacing: .06em; font-size: 17px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.25);
+}
+.hero .eyebrow { color: #bfe3df; }
+.hero h1 { margin: 4px 0 4px; }
+.hero-sub { margin: 0; color: #d6e6ef; font-size: 15px; }
+.hero-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+.hero-meta .pill {
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.08);
+  color: #eaf3f7;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 11.5px;
+}
+.hero-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  border: 1px solid rgba(255,255,255,.28);
+  background: rgba(255,255,255,.10);
+  color: #fff; text-decoration: none;
+  padding: 9px 13px; border-radius: 10px;
+  font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+}
+.btn:hover { background: rgba(255,255,255,.18); color: #fff; }
+.btn.primary { background: #fff; color: var(--navy); border-color: #fff; }
+.btn.primary:hover { background: #eaf3f7; color: var(--navy); }
+.btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+.topbar {
+  position: sticky; top: 0; z-index: 30;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar-inner { display: flex; align-items: center; gap: 14px; min-height: 50px; overflow-x: auto; }
+.topbar a {
+  color: var(--muted); text-decoration: none; font-size: 12.5px; font-weight: 600;
+  padding: 6px 2px; white-space: nowrap;
+}
+.topbar a:hover { color: var(--navy); }
+.topbar .sep { width: 1px; height: 18px; background: var(--line); flex: 0 0 auto; }
+main.wrap { padding-top: 26px; padding-bottom: 40px; }
+.eyebrow {
+  display: block; text-transform: uppercase; letter-spacing: .14em;
+  font-size: 10.5px; font-weight: 800; color: var(--teal);
+  margin-bottom: 6px;
+}
+.section { margin: 30px 0 38px; scroll-margin-top: 76px; }
+.section-head { margin-bottom: 16px; max-width: 920px; }
+.section-head p { color: var(--muted); margin: 6px 0 0; }
+.grid { display: grid; gap: 14px; }
+.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.kpi-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.kpi {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 15px 16px; box-shadow: var(--shadow);
+  border-top: 3px solid var(--navy-2);
+  min-height: 104px;
+}
+.kpi.teal { border-top-color: var(--teal); }
+.kpi.amber { border-top-color: var(--amber); }
+.kpi.red { border-top-color: var(--red); }
+.kpi.green { border-top-color: var(--green); }
+.kpi-label { display: block; color: var(--muted); font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+.kpi-value { display: block; font-size: 25px; line-height: 1.12; margin-top: 6px; letter-spacing: -.02em; }
+.kpi-hint { display: block; color: var(--muted); font-size: 11.5px; margin-top: 6px; }
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 16px; box-shadow: var(--shadow);
+}
+.card.flat { box-shadow: none; }
+.card h3 { margin-bottom: 8px; }
+.card h4 { margin: 14px 0 8px; }
+.badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  border-radius: 999px; padding: 3px 8px;
+  font-size: 10.5px; font-weight: 800; letter-spacing: .02em;
+  border: 1px solid transparent; white-space: nowrap;
+}
+.badge.ok { background: var(--green-soft); color: #14532d; border-color: #bbf7d0; }
+.badge.warn { background: var(--amber-soft); color: #78350f; border-color: #fde68a; }
+.badge.bad { background: var(--red-soft); color: #7f1d1d; border-color: #fecaca; }
+.badge.info { background: var(--blue-soft); color: #1e3a8a; border-color: #bfdbfe; }
+.badge.muted { background: #eef2f6; color: #475569; border-color: #e2e8f0; }
+.badge.accent { background: var(--teal-soft); color: #115e59; border-color: #99f6e4; }
+.badge.pending { background: #f1f5f9; color: #64748b; border-color: #e2e8f0; }
+.pending { color: #6b7a89; font-style: italic; }
+.note {
+  background: var(--surface-2); border: 1px solid var(--line); border-left: 4px solid var(--teal);
+  border-radius: 10px; padding: 12px 14px; color: #334155; font-size: 13px;
+}
+.note.warn { border-left-color: var(--amber); background: #fffbeb; }
+.note.bad { border-left-color: var(--red); background: #fef2f2; }
+.note.info { border-left-color: var(--blue); background: #eff6ff; }
+.note strong { color: var(--ink); }
+.alert {
+  background: var(--surface); border: 1px solid var(--line); border-left: 5px solid var(--muted);
+  border-radius: 10px; padding: 11px 13px; margin: 8px 0;
+  break-inside: avoid;
+}
+.alert.alta { border-left-color: var(--red); background: #fffafa; }
+.alert.media { border-left-color: var(--amber); background: #fffdf7; }
+.alert.baixa { border-left-color: #64748b; }
+.alert.info { border-left-color: var(--blue); background: #fbfdff; }
+.alert-head { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 4px; }
+.alert p { margin: 2px 0 0; font-size: 13px; }
+.bars { display: grid; gap: 8px; }
+.bar-row { display: grid; grid-template-columns: minmax(150px, 1.25fr) minmax(120px, 2fr) auto; gap: 10px; align-items: center; }
+.bar-label { font-size: 12.5px; line-height: 1.2; overflow: visible; text-overflow: clip; white-space: normal; overflow-wrap: anywhere; }
+.bar-track { height: 9px; background: #e8eef3; border-radius: 999px; overflow: hidden; }
+.bar-fill { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--teal), #2dd4bf); }
+.bar-fill.neg { background: linear-gradient(90deg, var(--red), #f87171); }
+.bar-value { font-size: 12px; font-weight: 700; text-align: right; white-space: nowrap; }
+.stack { display: flex; height: 18px; border-radius: 999px; overflow: hidden; background: #e8eef3; border: 1px solid var(--line); }
+.stack span { display: block; height: 100%; }
+.stack .s1 { background: #0f766e; }
+.stack .s2 { background: #f59e0b; }
+.stack .s3 { background: #64748b; }
+.stack .s4 { background: #b91c1c; }
+.legend { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; font-size: 11.5px; color: var(--muted); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+.table-block { margin: 12px 0 18px; }
+.table-tools { display: flex; gap: 8px; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-bottom: 8px; }
+.table-tools input {
+  width: min(360px, 100%); border: 1px solid var(--line); border-radius: 9px;
+  padding: 8px 10px; font: inherit; font-size: 13px; background: #fff;
+}
+.table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+table.table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+table.table th {
+  text-align: left; background: #f1f5f9; color: #334155; font-size: 10.5px;
+  text-transform: uppercase; letter-spacing: .06em; padding: 8px 9px;
+  border-bottom: 1px solid var(--line); white-space: nowrap;
+}
+table.table th[data-sort] { cursor: pointer; user-select: none; }
+table.table th[data-sort]:hover { color: var(--teal); }
+table.table td { padding: 8px 9px; border-bottom: 1px solid #edf2f6; vertical-align: top; }
+table.table tbody tr:last-child td { border-bottom: 0; }
+table.table tbody tr:hover { background: #fbfdff; }
+table.table td.right, table.table th.right { text-align: right; }
+table.table td.center, table.table th.center { text-align: center; }
+table.table td.nowrap { white-space: nowrap; }
+.cell-title { font-weight: 700; color: var(--ink); }
+.cell-note { display: block; color: var(--muted); font-size: 11px; margin-top: 3px; }
+.detalhe { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; margin: 12px 0; }
+.detalhe > summary { cursor: pointer; padding: 10px 12px; font-weight: 700; color: var(--navy); list-style: none; }
+.detalhe > summary::-webkit-details-marker { display: none; }
+.detalhe[open] > summary { border-bottom: 1px solid var(--line); }
+.detalhe .table-block { margin: 0; padding: 0 12px 12px; }
+.empty {
+  border: 1px dashed var(--line); border-radius: 10px; padding: 14px;
+  color: var(--muted); background: var(--surface-2); font-size: 13px;
+}
+.programa {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow); margin: 12px 0 18px; overflow: hidden;
+  scroll-margin-top: 76px;
+}
+.programa > summary {
+  list-style: none; cursor: pointer; padding: 15px 16px;
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto; gap: 12px; align-items: center;
+  background: linear-gradient(180deg, #fff, #fbfdff);
+  border-bottom: 1px solid transparent;
+}
+.programa[open] > summary { border-bottom-color: var(--line); }
+.programa > summary::-webkit-details-marker { display: none; }
+.prog-id {
+  font-weight: 800; font-size: 13px; color: #fff; background: var(--navy-2);
+  padding: 6px 8px; border-radius: 8px; font-variant-numeric: tabular-nums;
+}
+.prog-heading h3 { font-size: 17px; margin: 0 0 4px; }
+.prog-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+.prog-value { text-align: right; min-width: 126px; }
+.prog-value strong { display: block; font-size: 17px; }
+.prog-value span { color: var(--muted); font-size: 11px; }
+.prog-toggle { color: var(--muted); font-size: 20px; width: 26px; text-align: center; transition: transform .15s ease; }
+.programa[open] .prog-toggle { transform: rotate(180deg); }
+.prog-body { padding: 16px; }
+.ficha { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-bottom: 12px; }
+.ficha div { background: var(--surface-2); border: 1px solid var(--line); border-radius: 9px; padding: 9px 10px; }
+.ficha span { display: block; color: var(--muted); font-size: 10.5px; text-transform: uppercase; letter-spacing: .06em; }
+.ficha strong { display: block; font-size: 12.5px; margin-top: 3px; }
+.objetivo { background: var(--surface-2); border: 1px solid var(--line); border-radius: 9px; padding: 11px 12px; margin: 10px 0 12px; font-size: 13px; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; margin: 8px 0 4px; }
+.panel { background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 12px; margin-top: 12px; }
+.panel h4 { margin-top: 0; }
+.mini-kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin: 10px 0; }
+.mini { background: #fff; border: 1px solid var(--line); border-radius: 9px; padding: 9px 10px; }
+.mini span { display: block; color: var(--muted); font-size: 10.5px; text-transform: uppercase; letter-spacing: .05em; }
+.mini strong { display: block; font-size: 15px; margin-top: 3px; }
+.exec-compact { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; margin-top: 12px; font-size: 12.5px; }
+.exec-compact strong { color: var(--ink); }
+.exec-compact a { margin-left: auto; font-weight: 700; }
+table.table tr.group-row td { background: #e8eef3; font-weight: 800; color: var(--navy); border-top: 1px solid var(--line); }
+.two-col { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.ug-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.ug-card {
+  display: flex; flex-direction: column; gap: 7px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 12px; color: var(--ink); text-decoration: none; min-height: 150px;
+  box-shadow: 0 4px 14px rgba(15,42,68,.04);
+}
+.ug-card.active { border-color: #5eead4; box-shadow: 0 0 0 1px #5eead4, 0 8px 22px rgba(15,118,110,.12); }
+.ug-card.disabled { opacity: .78; }
+.ug-card:hover { border-color: var(--teal); }
+.ug-card .ug-code { font-size: 11px; font-weight: 800; color: var(--teal); letter-spacing: .08em; }
+.ug-card .ug-name { font-weight: 700; font-size: 13px; line-height: 1.25; min-height: 34px; }
+.ug-card .ug-value { font-size: 16px; font-weight: 800; }
+.ug-card .ug-meta { color: var(--muted); font-size: 11px; }
+.ug-card .ug-bar { height: 6px; background: #e8eef3; border-radius: 999px; overflow: hidden; margin-top: auto; }
+.ug-card .ug-bar span { display: block; height: 100%; background: var(--teal); }
+.ug-card .ug-foot { display: flex; justify-content: space-between; gap: 6px; align-items: center; font-size: 10.5px; color: var(--muted); }
+.insights { display: grid; gap: 8px; }
+.insight { display: flex; gap: 9px; align-items: flex-start; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+.insight .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); margin-top: 6px; flex: 0 0 auto; }
+.toc { display: flex; gap: 6px; flex-wrap: wrap; }
+.toc a { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 5px 9px; font-size: 11.5px; text-decoration: none; color: var(--muted); }
+.toc a:hover { color: var(--teal); border-color: var(--teal); }
+.filters { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 10px 0 14px; }
+.filters input { border: 1px solid var(--line); border-radius: 9px; padding: 9px 11px; font: inherit; font-size: 13px; min-width: 280px; }
+.chip-btn { border: 1px solid var(--line); background: #fff; color: var(--muted); border-radius: 999px; padding: 7px 11px; font: inherit; font-size: 12px; font-weight: 700; cursor: pointer; }
+.chip-btn.ativo, .chip-btn:hover { color: var(--teal); border-color: var(--teal); background: var(--teal-soft); }
+.footer { border-top: 1px solid var(--line); padding: 22px 0 40px; color: var(--muted); font-size: 11.5px; }
+.footer strong { color: var(--ink); }
+.print-only { display: none; }
+@media (max-width: 1040px) {
+  .kpi-grid, .ug-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-4, .ficha, .mini-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 680px) {
+  .wrap { padding: 0 14px; }
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+  .kpi-grid, .ug-grid, .grid-2, .grid-3, .grid-4, .ficha, .mini-kpis, .two-col { grid-template-columns: 1fr; }
+  .programa > summary { grid-template-columns: auto minmax(0, 1fr) auto; }
+  .prog-value { display: none; }
+  .bar-row { grid-template-columns: 1fr; gap: 3px; }
+  .bar-value { text-align: left; }
+  .filters input { min-width: 100%; }
+}
+@media print {
+  @page { size: A4; margin: 13mm 12mm 14mm; }
+  html, body { background: #fff !important; color: #111; font-size: 9.5pt; }
+  .no-print, .topbar, .hero-actions, .table-tools, .btn, .filters { display: none !important; }
+  .wrap { max-width: none; padding: 0; }
+  .hero {
+    background: #fff !important; color: #111 !important;
+    border-bottom: 2px solid #0f2a44; padding: 0 0 10px;
+  }
+  .hero .eyebrow { color: #0f766e; }
+  .hero-sub { color: #333; }
+  .hero-meta .pill { border: 1px solid #aaa; background: #fff; color: #111; }
+  .brand-mark { background: #0f2a44; color: #fff; border: 0; }
+  .section { margin: 12pt 0; }
+  .section-head { margin-bottom: 8pt; }
+  .section-head h2 { font-size: 14pt; }
+  .kpi-grid { grid-template-columns: repeat(4, 1fr); gap: 6pt; }
+  .kpi { box-shadow: none; border: 1px solid #bbb; break-inside: avoid; min-height: 0; }
+  .kpi-value { font-size: 16pt; }
+  .card, .alert, .note, .insight { box-shadow: none; break-inside: avoid; }
+  .programa { border: 1px solid #bbb; box-shadow: none; break-inside: auto; }
+  .programa > summary { break-after: avoid; }
+  .section-head { break-after: avoid; }
+  .programa > summary { cursor: default; }
+  .programa .prog-body { display: block !important; }
+  details > * { display: block !important; }
+  .table-wrap { overflow: visible; border-color: #bbb; }
+  table.table { font-size: 7.8pt; }
+  table.table th { font-size: 6.8pt; padding: 4pt 5pt; }
+  table.table td { padding: 4pt 5pt; }
+  thead { display: table-header-group; }
+  tr { break-inside: avoid; }
+  .bar-fill, .stack span, .badge, .ug-bar span { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a { color: #111; text-decoration: none; }
+  .print-only { display: block; }
+  .pagebreak { break-before: page; }
+  #execucao, #analise, #evidencias, #alertas { break-before: page; }
+  .hide-print { display: none !important; }
+}
+</style></head><body><header class="hero"><div class="wrap hero-inner"><div class="hero-brand"><div class="brand-mark">UG 016</div><div><span class="eyebrow">Prefeitura Municipal de Parauapebas · Planejamento e Controle</span><h1>Raio-X Técnico do PPA 2026-2029</h1><p class="hero-sub">UG 016 — Fundo de Manutenção e Desenvolvimento da Educação Básica — FUNDEB · diagnóstico completo do 1º ano</p><div class="hero-meta"><span class="pill">PPA 2026-2029</span><span class="pill">Contas: despesas_programas_2026_0101-1711.xlsx</span><span class="pill">Gerado em 17/11/2026 13:00</span><span class="pill">versão 0.1.0</span></div></div></div><div class="hero-actions no-print"><a class="btn" href="index.html">Índice</a><button class="btn primary" type="button" data-print>Imprimir / PDF</button><a class="btn" href="pdf/ug_016_fundeb.pdf">Baixar PDF</a></div></div></header><nav class="topbar no-print"><div class="wrap topbar-inner"><a href="#resumo">Resumo</a><span class="sep"></span><a href="#programas">Programas</a><span class="sep"></span><a href="#execucao">Execução</a><span class="sep"></span><a href="#analise">Análise</a><span class="sep"></span><a href="#evidencias">Evidências</a><span class="sep"></span><a href="#alertas">Alertas</a><span class="sep"></span><a href="#metodologia">Metodologia</a></div></nav><main class="wrap"><div class="kpi-grid"><div class="kpi teal"><span class="kpi-label">Programas</span><strong class="kpi-value num">3</strong><span class="kpi-hint">0 próprio(s) · 3 compartilhado(s)</span></div><div class="kpi teal"><span class="kpi-label">Indicadores</span><strong class="kpi-value num">10</strong><span class="kpi-hint">referência atual e 2029; sem meta anual</span></div><div class="kpi teal"><span class="kpi-label">Ações</span><strong class="kpi-value num">19</strong><span class="kpi-hint">meta 2026 do PPA</span></div><div class="kpi green"><span class="kpi-label">Liquidado 2026</span><strong class="kpi-value num">R$ 272,96 mi</strong><span class="kpi-hint">13,4% do total municipal</span></div><div class="kpi"><span class="kpi-label">UOs</span><strong class="kpi-value num">1</strong><span class="kpi-hint">subseções por unidade orçamentária</span></div><div class="kpi"><span class="kpi-label">Resultados</span><strong class="kpi-value num">0/29</strong><span class="kpi-hint">resultados de 2026 informados</span></div><div class="kpi amber"><span class="kpi-label">Sem indicador</span><strong class="kpi-value num">0</strong><span class="kpi-hint">programa(s) próprio(s)</span></div><div class="kpi red"><span class="kpi-label">Sem execução</span><strong class="kpi-value num">0</strong><span class="kpi-hint">programa(s) próprio(s)</span></div></div><section id="resumo" class="section"><div class="section-head"><span class="eyebrow">Leitura da UG</span><h2>Resumo — Fundo de Manutenção e Desenvolvimento da Educação Básica — FUNDEB</h2><p>Indicadores, ações, execução e alertas da UG. O detalhamento completo está nos cartões de programa.</p></div><div class="insights"><div class="insight"><span class="dot"></span><span>O programa 6024 — Gestão do Ensino Fundamental concentra R$ 201,83 mi (73,9% da UG).</span></div><div class="insight"><span class="dot"></span><span>A UO FUNDEB responde por R$ 272,96 mi (100,0% da UG).</span></div><div class="insight"><span class="dot"></span><span>Programas compartilhados: 6024 (R$ 201,83 mi; outras UGs: UG 004); 6023 (R$ 70,55 mi; outras UGs: UG 004); 6025 (R$ 580,4 mil; outras UGs: UG 004).</span></div><div class="insight"><span class="dot"></span><span>Resultados 2026: 0 de 29 indicadores/ações informados (0,0%).</span></div><div class="insight"><span class="dot"></span><span>Metas de ação: 19 de 19 usam percentual do plano, não meta física anual.</span></div><div class="insight"><span class="dot"></span><span>Participação no total liquidado do município: 13,4% (R$ 272,96 mi de R$ 2,03 bi).</span></div></div></section><section id="programas" class="section"><div class="section-head"><span class="eyebrow">Diagnóstico</span><h2>Programas do PPA</h2><p>Cada programa traz ficha, indicadores, ações do PPA e a execução LOA por projeto/atividade e natureza.</p></div><div class="filters no-print"><input id="busca-programa" type="search" placeholder="Buscar programa, indicador ou ação..." aria-label="Buscar programa"><button class="chip-btn ativo" type="button" data-filtro-programa="todos">Todos</button><button class="chip-btn" type="button" data-filtro-programa="sem-execucao">Sem execução</button><button class="chip-btn" type="button" data-filtro-programa="sem-indicador">Sem indicador</button><button class="chip-btn" type="button" data-filtro-programa="compartilhado">Compartilhado</button><button class="btn ghost" type="button" data-expandir="abrir">Expandir programas</button><span class="small muted" id="contador-programas"></span></div><details class="programa" id="prog-6024" data-codigo="6024" data-status="compartilhado" data-busca="6024 GESTAO DO ENSINO FUNDAMENTAL"><summary><span class="prog-id">6024</span><span class="prog-heading"><h3>Gestão do Ensino Fundamental</h3><span class="prog-badges"><span class="badge info">Compartilhado</span></span></span><span class="prog-value"><strong class="num">R$ 201,83 mi</strong><span>73,9% da UG · 263 linhas</span></span><span class="prog-toggle" aria-hidden="true">⌄</span></summary><div class="prog-body"><div class="ficha"><div><span>Eixo</span><strong>Avanço Social</strong></div><div><span>Tipo</span><strong>Duração Continuada</strong></div><div><span>Natureza</span><strong>Finalístico</strong></div><div><span>Período</span><strong>01/01/2026 - 31/12/2029</strong></div><div><span>Órgão no PPA</span><strong>FUNDO MUNICIPAL DE EDUCAÇÃO/FUNDEB</strong></div><div><span>Público-alvo</span><strong>Alunos na faixa etária de 6 a 14 anos</strong></div></div><div class="objetivo"><strong>Objetivo:</strong> Garantir o fortalecimento do Ensino Fundamental, ofertar vagas para o ensino em tempo integral, garantindo o desenvolvimento integral das crianças e adolescentes , a correção de fluxo e a melhoria da qualidade da proficiência dos estudantes do sistema municipal de ensino, reduzindo as desigualdades e assegurando uma educação de qualidade, com professores capacitados, valorização dos profissionais da Educação Básica, formação continuada, valorização do piso salarial e a carreira do magistério.</div><div class="note info"><strong>Programa compartilhado:</strong> dono provisório UG 004. Indicadores e metas são do programa; esta UG reporta a parte executada (R$ 201.833.981,65).</div><div class="chips"><span class="badge muted">4 indicador(es)</span><span class="badge muted">10 ação(ões)</span><span class="badge info">10 meta(s) percentual(is)</span><span class="badge ok">0 meta(s) física(s)</span></div><div class="panel"><h4>Indicadores do programa</h4><div class="table-block"><div class="table-tools no-print"><input type="search" data-busca-tabela="ind-6024" placeholder="Buscar indicador..." aria-label="Buscar indicador..."></div><div class="table-wrap"><table class="table table-compact" id="ind-6024" data-sortable><thead><tr><th class="center" data-sort>Nº</th><th class="left" data-sort>Indicador</th><th class="right" data-sort>Referência atual</th><th class="right" data-sort>Resultado 2026</th><th class="right" data-sort>Referência 2029</th><th class="center" data-sort>Direção</th><th class="center" data-sort>Tendência</th><th class="center" data-sort>Status</th><th class="center" data-sort>Evidência</th></tr></thead><tbody><tr><td class="center" data-value="1"><strong>1</strong></td><td class="left"><span class="cell-title">Número de Unidades de Ensino Fundamental</span><span class="cell-note">Estatística SEMED</span></td><td class="right">44</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right">48</td><td class="center">↑ Aumentar</td><td class="center"><span class="badge pending">A apurar</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="2"><strong>2</strong></td><td class="left"><span class="cell-title">Número de alunos matriculados no Ensino Fundamental</span><span class="cell-note">Estatística SEMED</span></td><td class="right">38.591</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right">41.000</td><td class="center">↑ Aumentar</td><td class="center"><span class="badge pending">A apurar</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="3"><strong>3</strong></td><td class="left"><span class="cell-title">Número de Escolas de Tempo Integral</span><span class="cell-note">Estatística SEMED</span></td><td class="right">5</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right">5</td><td class="center">→ Manter</td><td class="center"><span class="badge pending">A apurar</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="4"><strong>4</strong></td><td class="left"><span class="cell-title">Número de alunos matriculados no Tempo Integral</span><span class="cell-note">Estatística SEMED</span></td><td class="right">2.545</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right">2.600</td><td class="center">↑ Aumentar</td><td class="center"><span class="badge pending">A apurar</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr></tbody></table></div></div></div><div class="panel"><h4>Ações do programa</h4><div class="table-block"><div class="table-tools no-print"><input type="search" data-busca-tabela="acao-6024" placeholder="Buscar ação..." aria-label="Buscar ação..."></div><div class="table-wrap"><table class="table table-compact" id="acao-6024" data-sortable><thead><tr><th class="center" data-sort>Nº</th><th class="left" data-sort>Ação</th><th class="right" data-sort>Meta 2026</th><th class="right" data-sort>Meta 2027-2029</th><th class="right" data-sort>Resultado 2026</th><th class="right" data-sort>% da meta</th><th class="center" data-sort>Status</th><th class="center" data-sort>Evidência</th></tr></thead><tbody><tr><td class="center" data-value="60"><strong>60</strong></td><td class="left"><span class="cell-title">Remuneração do Magistério do Ensino Fundamental</span><span class="cell-note">Atividade · Atividades Mantidas</span></td><td class="right"><span class="badge info">25% do plano</span><span class="cell-note">total 4 anos: 100%</span></td><td class="right">75 %</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right" data-value=""><span class="pending">—</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="61"><strong>61</strong></td><td class="left"><span class="cell-title">Manutenção e Desenvolvimento do Ensino Fundamental</span><span class="cell-note">Atividade · Atividades Mantidas</span></td><td class="right"><span class="badge info">25% do plano</span><span class="cell-note">total 4 anos: 100%</span></td><td class="right">75 %</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right" data-value=""><span class="pending">—</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="62"><strong>62</strong></td><td class="left"><span class="cell-title">Manutenção do Programa de Educação em Tempo Integral</span><span class="cell-note">Atividade · Atividades Mantidas</span></td><td class="right"><span class="badge info">25% do plano</span><span class="cell-note">total 4 anos: 100%</span></td><td class="right">75 %</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right" data-value=""><span class="pending">—</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="63"><strong>63</strong></td><td class="left"><span class="cell-title">Capacitação e Habilitação de professores e demais servidores</span><span class="cell-note">Atividade · Atividades Mantidas</span></td><td class="right"><span class="badge info">25% do plano</span><span class="cell-note">total 4 anos: 100%</span></td><td class="right">75 %</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right" data-value=""><span class="pending">—</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="64"><strong>64</strong></td><td class="left"><span class="cell-title">Construção, Recuperação, Ampliação e Equipamentos da Escola de Ensino Fundamental</span><span class="cell-note">Projeto · Escolas Construídas, ampliadas, recuperadas</span></td><td class="right"><span class="badge info">25% do plano</span><span class="cell-note">total 4 anos: 100%</span></td><td class="right">75 %</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right" data-value=""><span class="pending">—</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="65"><strong>65</strong></td><td class="left"><span class="cell-title">Manutenção das Atividades da Educação Especial e Inclusiva</span><span class="cell-note">Atividade · Atividades Mantidas</span></td><td class="right"><span class="badge info">25% do plano</span><span class="cell-note">total 4 anos: 100%</span></td><td class="right">75 %</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right" data-value=""><span class="pending">—</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="66"><strong>66</strong></td><td class="left"><span class="cell-title">Manutenção das Atividades do Salário Educação</span><span class="cell-note">Atividade · Atividades Mantidas</span></td><td class="right"><span class="badge info">25% do plano</span><span class="cell-note">total 4 anos: 100%</span></td><td class="right">75 %</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right" data-value=""><span class="pending">—</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="67"><strong>67</strong></td><td class="left"><span class="cell-title">Manutenção das Atividades de Educação Física</span><span class="cell-note">Atividade · Atividades Mantidas</span></td><td class="right"><span class="badge info">25% do plano</span><span class="cell-note">total 4 anos: 100%</span></td><td class="right">75 %</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right" data-value=""><span class="pending">—</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="68"><strong>68</strong></td><td class="left"><span class="cell-title">Inclusão Digital, Inovação e Tecnologias Educacionais</span><span class="cell-note">Projeto · Ação Realizada</span></td><td class="right"><span class="badge info">25% do plano</span><span class="cell-note">total 4 anos: 100%</span></td><td class="right">75 %</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right" data-value=""><span class="pending">—</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="69"><strong>69</strong></td><td class="left"><span class="cell-title">Apoio às Atividades Escolas Culturais Cívicas</span><span class="cell-note">Atividade · Atividades Mantidas</span></td><td class="right"><span class="badge info">25% do plano</span><span class="cell-note">total 4 anos: 100%</span></td><td class="right">75 %</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right" data-value=""><span class="pending">—</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr></tbody></table></div></div></div><div class="exec-compact"><span>Liquidado <strong>R$ 201.833.981,65</strong></span><span>73,9% da UG</span><span>53,2% do programa</span><span>263 linhas</span><span>Principal UO: FUNDEB (R$ 201,83 mi)</span><span> · Outras UGs: UG 004 (R$ 177,39 mi)</span><a href="#loa-6024">Ver execução LOA</a></div><div class="panel" id="loa-6024"><h4>Execução LOA — projeto/atividade e natureza</h4><p class="small muted">Código da ação orçamentária (projeto/atividade) e sua natureza/elemento. Não há crosswalk com a ação do PPA; o elo disponível é o programa.</p><div class="table-block"><div class="table-tools no-print"><input type="search" data-busca-tabela="loa-detalhe-6024" placeholder="Buscar natureza ou ação..." aria-label="Buscar natureza ou ação..."></div><div class="table-wrap"><table class="table table-compact" id="loa-detalhe-6024" data-sortable><thead><tr><th class="left" data-sort>Natureza / Elemento</th><th class="right" data-sort>Liquidado</th><th class="right" data-sort>% da ação</th><th class="right" data-sort>% do programa</th><th class="right" data-sort>% da UG</th><th class="right" data-sort>Linhas</th></tr></thead><tbody><tr class="group-row"><td colspan="6"><span class="badge muted">Código P/A 2.282</span> <strong>Remuneração do Magistério do Ensino Fundamental</strong> · total R$ 165.322.110,79 · 43,6% do programa · 60,6% da UG</td></tr><tr><td class="left"><strong>3.1.90.11.00</strong><span class="cell-note">Vencimentos e vantagens fixas — pessoal civil</span></td><td class="right" data-value="129879294.24999999">R$ 129.879.294,25</td><td class="right" data-value="78.56135735829001">78,6%</td><td class="right" data-value="34.24896720651748">34,2%</td><td class="right" data-value="47.5817790310247">47,6%</td><td class="right" data-value="45">45</td></tr><tr><td class="left"><strong>3.1.90.04.00</strong><span class="cell-note">Contratação por tempo determinado</span></td><td class="right" data-value="35432562.75999999">R$ 35.432.562,76</td><td class="right" data-value="21.43244033764372">21,4%</td><td class="right" data-value="9.34351150441451">9,3%</td><td class="right" data-value="12.980855658978408">13,0%</td><td class="right" data-value="23">23</td></tr><tr><td class="left"><strong>3.1.90.16.00</strong><span class="cell-note">Outras despesas variáveis — pessoal civil</span></td><td class="right" data-value="10253.78">R$ 10.253,78</td><td class="right" data-value="0.006202304066287202">0,0%</td><td class="right" data-value="0.002703905784141916">0,0%</td><td class="right" data-value="0.0037565117443093938">0,0%</td><td class="right" data-value="2">2</td></tr><tr class="group-row"><td colspan="6"><span class="badge muted">Código P/A 2.281</span> <strong>Manutenção e Desenvolvimento do Ensino Fundamental</strong> · total R$ 34.792.451,18 · 9,2% do programa · 12,7% da UG</td></tr><tr><td class="left"><strong>3.3.90.46.00</strong><span class="cell-note">Auxílio-alimentação</span></td><td class="right" data-value="31500693.700000003">R$ 31.500.693,70</td><td class="right" data-value="90.5388744731724">90,5%</td><td class="right" data-value="8.306683769294136">8,3%</td><td class="right" data-value="11.540400304857618">11,5%</td><td class="right" data-value="100">100</td></tr><tr><td class="left"><strong>3.3.90.49.00</strong><span class="cell-note">Auxílio-transporte</span></td><td class="right" data-value="1454948.6800000002">R$ 1.454.948,68</td><td class="right" data-value="4.181794126756894">4,2%</td><td class="right" data-value="0.38366769635018944">0,4%</td><td class="right" data-value="0.5330260453986189">0,5%</td><td class="right" data-value="50">50</td></tr><tr><td class="left"><strong>3.1.90.11.00</strong><span class="cell-note">Vencimentos e vantagens fixas — pessoal civil</span></td><td class="right" data-value="918062.57">R$ 918.062,57</td><td class="right" data-value="2.6386832168000174">2,6%</td><td class="right" data-value="0.24209166699765278">0,2%</td><td class="right" data-value="0.3363357538601242">0,3%</td><td class="right" data-value="9">9</td></tr><tr><td class="left"><strong>3.1.90.04.00</strong><span class="cell-note">Contratação por tempo determinado</span></td><td class="right" data-value="470854.34">R$ 470.854,34</td><td class="right" data-value="1.3533232756841935">1,4%</td><td class="right" data-value="0.12416355465148698">0,1%</td><td class="right" data-value="0.17249929860685995">0,2%</td><td class="right" data-value="4">4</td></tr><tr><td class="left"><strong>3.1.90.13.00</strong><span class="cell-note">Obrigações patronais</span></td><td class="right" data-value="379192.14">R$ 379.192,14</td><td class="right" data-value="1.0898690007158036">1,1%</td><td class="right" data-value="0.09999237555780903">0,1%</td><td class="right" data-value="0.1389184990569148">0,1%</td><td class="right" data-value="13">13</td></tr><tr><td class="left"><strong>3.3.90.93.00</strong><span class="cell-note">Indenizações e restituições</span></td><td class="right" data-value="68699.75">R$ 68.699,75</td><td class="right" data-value="0.19745590687065806">0,2%</td><td class="right" data-value="0.01811601686344973">0,0%</td><td class="right" data-value="0.02516841766705735">0,0%</td><td class="right" data-value="1">1</td></tr><tr class="group-row"><td colspan="6"><span class="badge muted">Código P/A 2.286</span> <strong>Manutenção das Atividades da Educação Especial e Inclusiva</strong> · total R$ 1.719.419,68 · 0,5% do programa · 0,6% da UG</td></tr><tr><td class="left"><strong>3.1.90.11.00</strong><span class="cell-note">Vencimentos e vantagens fixas — pessoal civil</span></td><td class="right" data-value="1703804.5">R$ 1.703.804,50</td><td class="right" data-value="99.09183428678678">99,1%</td><td class="right" data-value="0.4492905877244318">0,4%</td><td class="right" data-value="0.6241953322830405">0,6%</td><td class="right" data-value="9">9</td></tr><tr><td class="left"><strong>3.1.90.04.00</strong><span class="cell-note">Contratação por tempo determinado</span></td><td class="right" data-value="15615.18">R$ 15.615,18</td><td class="right" data-value="0.9081657132131927">0,9%</td><td class="right" data-value="0.004117698597240936">0,0%</td><td class="right" data-value="0.005720681257010113">0,0%</td><td class="right" data-value="7">7</td></tr></tbody></table></div></div></div></div></details><details class="programa" id="prog-6023" data-codigo="6023" data-status="compartilhado" data-busca="6023 GESTAO DA EDUCACAO INFANTIL: CRECHE E PRE-ESCOLA"><summary><span class="prog-id">6023</span><span class="prog-heading"><h3>Gestão da Educação Infantil: Creche e Pré-escola</h3><span class="prog-badges"><span class="badge info">Compartilhado</span></span></span><span class="prog-value"><strong class="num">R$ 70,55 mi</strong><span>25,8% da UG · 253 linhas</span></span><span class="prog-toggle" aria-hidden="true">⌄</span></summary><div class="prog-body"><div class="ficha"><div><span>Eixo</span><strong>Avanço Social</strong></div><div><span>Tipo</span><strong>Duração Continuada</strong></div><div><span>Natureza</span><strong>Finalístico</strong></div><div><span>Período</span><strong>01/01/2026 - 31/12/2029</strong></div><div><span>Órgão no PPA</span><strong>FUNDO MUNICIPAL DE EDUCAÇÃO/FUNDEB</strong></div><div><span>Público-alvo</span><strong>Crianças na faixa de 9 meses a 5 anos e 11 meses</strong></div></div><div class="objetivo"><strong>Objetivo:</strong> Oferecer a educação nas unidades de Educação Infantil: Creche e Pré-escola, proporcionando cobertura obrigatória à demanda da Pré-escola (4 e 5 anos) e ampliação progressiva das vagas de Creche (9 meses a 3 anos) por meio da ampliação da rede física escolar e garantindo o desenvolvimento integral das crianças. Valorização dos profissionais da Educação: garantindo a remuneração dos docentes e servidores de apoio, formação continuada.</div><div class="note info"><strong>Programa compartilhado:</strong> dono provisório UG 004. Indicadores e metas são do programa; esta UG reporta a parte executada (R$ 70.545.754,29).</div><div class="chips"><span class="badge muted">4 indicador(es)</span><span class="badge muted">7 ação(ões)</span><span class="badge info">7 meta(s) percentual(is)</span><span class="badge ok">0 meta(s) física(s)</span></div><div class="panel"><h4>Indicadores do programa</h4><div class="table-block"><div class="table-tools no-print"><input type="search" data-busca-tabela="ind-6023" placeholder="Buscar indicador..." aria-label="Buscar indicador..."></div><div class="table-wrap"><table class="table table-compact" id="ind-6023" data-sortable><thead><tr><th class="center" data-sort>Nº</th><th class="left" data-sort>Indicador</th><th class="right" data-sort>Referência atual</th><th class="right" data-sort>Resultado 2026</th><th class="right" data-sort>Referência 2029</th><th class="center" data-sort>Direção</th><th class="center" data-sort>Tendência</th><th class="center" data-sort>Status</th><th class="center" data-sort>Evidência</th></tr></thead><tbody><tr><td class="center" data-value="1"><strong>1</strong></td><td class="left"><span class="cell-title">Número de Unidades de Educação Infantil: Creche e Pré-escola</span><span class="cell-note">Estatística SEMED</span></td><td class="right">28</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right">32</td><td class="center">↑ Aumentar</td><td class="center"><span class="badge pending">A apurar</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="2"><strong>2</strong></td><td class="left"><span class="cell-title">Número de Matrículas em Creche e Pré-escola</span><span class="cell-note">Estatística SEMED</span></td><td class="right">10.112</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right">11.000</td><td class="center">↑ Aumentar</td><td class="center"><span class="badge pending">A apurar</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="3"><strong>3</strong></td><td class="left"><span class="cell-title">Número de Unidades de Educação Infantil em Tempo Integral</span><span class="cell-note">INEP/Censo Escolar</span></td><td class="right">3</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right">4</td><td class="center">↑ Aumentar</td><td class="center"><span class="badge pending">A apurar</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="4"><strong>4</strong></td><td class="left"><span class="cell-title">Número de Matrículas de Creche e Pré-escola em Tempo Integral</span><span class="cell-note">INEP/Censo Escolar</span></td><td class="right">491</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right">600</td><td class="center">↑ Aumentar</td><td class="center"><span class="badge pending">A apurar</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr></tbody></table></div></div></div><div class="panel"><h4>Ações do programa</h4><div class="table-block"><div class="table-tools no-print"><input type="search" data-busca-tabela="acao-6023" placeholder="Buscar ação..." aria-label="Buscar ação..."></div><div class="table-wrap"><table class="table table-compact" id="acao-6023" data-sortable><thead><tr><th class="center" data-sort>Nº</th><th class="left" data-sort>Ação</th><th class="right" data-sort>Meta 2026</th><th class="right" data-sort>Meta 2027-2029</th><th class="right" data-sort>Resultado 2026</th><th class="right" data-sort>% da meta</th><th class="center" data-sort>Status</th><th class="center" data-sort>Evidência</th></tr></thead><tbody><tr><td class="center" data-value="53"><strong>53</strong></td><td class="left"><span class="cell-title">Remuneração do Magistério Educação Infantil: Pré-escola</span><span class="cell-note">Atividade · Atividades Mantidas</span></td><td class="right"><span class="badge info">25% do plano</span><span class="cell-note">total 4 anos: 100%</span></td><td class="right">75 %</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right" data-value=""><span class="pending">—</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="54"><strong>54</strong></td><td class="left"><span class="cell-title">Remuneração do Magistério Educação Infantil: Creche</span><span class="cell-note">Atividade · Atividades Mantidas</span></td><td class="right"><span class="badge info">25% do plano</span><span class="cell-note">total 4 anos: 100%</span></td><td class="right">75 %</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right" data-value=""><span class="pending">—</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="55"><strong>55</strong></td><td class="left"><span class="cell-title">Manutenção e Desenvolvimento da Educação Infantil: Pré- escola</span><span class="cell-note">Atividade · Atividades Mantidas</span></td><td class="right"><span class="badge info">25% do plano</span><span class="cell-note">total 4 anos: 100%</span></td><td class="right">75 %</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right" data-value=""><span class="pending">—</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="56"><strong>56</strong></td><td class="left"><span class="cell-title">Manutenção e Desenvolvimento da Educação Infantil: Creche</span><span class="cell-note">Atividade · Atividades Mantidas</span></td><td class="right"><span class="badge info">25% do plano</span><span class="cell-note">total 4 anos: 100%</span></td><td class="right">75 %</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right" data-value=""><span class="pending">—</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="57"><strong>57</strong></td><td class="left"><span class="cell-title">Construção, Recuperação, Ampliação e Equipamentos das Unidades de Educação Infantil: Pré- escola</span><span class="cell-note">Projeto · Escolas construídas, ampliadas, recuperadas e equipadas.</span></td><td class="right"><span class="badge info">25% do plano</span><span class="cell-note">total 4 anos: 100%</span></td><td class="right">75 %</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right" data-value=""><span class="pending">—</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="58"><strong>58</strong></td><td class="left"><span class="cell-title">Construção, Recuperação, Ampliação e Equipamentos das Unidades de Educação Infantil: Creche</span><span class="cell-note">Projeto · Escolas construídas, ampliadas, recuperadas e equipadas.</span></td><td class="right"><span class="badge info">25% do plano</span><span class="cell-note">total 4 anos: 100%</span></td><td class="right">75 %</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right" data-value=""><span class="pending">—</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="59"><strong>59</strong></td><td class="left"><span class="cell-title">Desenvolvimento das ações do Plano Municipal da Primeira Infância nas escolas de Educação Infantil da rede Municipal de Ensino</span><span class="cell-note">Atividade · Atividades Mantidas</span></td><td class="right"><span class="badge info">25% do plano</span><span class="cell-note">total 4 anos: 100%</span></td><td class="right">75 %</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right" data-value=""><span class="pending">—</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr></tbody></table></div></div></div><div class="exec-compact"><span>Liquidado <strong>R$ 70.545.754,29</strong></span><span>25,8% da UG</span><span>64,4% do programa</span><span>253 linhas</span><span>Principal UO: FUNDEB (R$ 70,55 mi)</span><span> · Outras UGs: UG 004 (R$ 38,99 mi)</span><a href="#loa-6023">Ver execução LOA</a></div><div class="panel" id="loa-6023"><h4>Execução LOA — projeto/atividade e natureza</h4><p class="small muted">Código da ação orçamentária (projeto/atividade) e sua natureza/elemento. Não há crosswalk com a ação do PPA; o elo disponível é o programa.</p><div class="table-block"><div class="table-tools no-print"><input type="search" data-busca-tabela="loa-detalhe-6023" placeholder="Buscar natureza ou ação..." aria-label="Buscar natureza ou ação..."></div><div class="table-wrap"><table class="table table-compact" id="loa-detalhe-6023" data-sortable><thead><tr><th class="left" data-sort>Natureza / Elemento</th><th class="right" data-sort>Liquidado</th><th class="right" data-sort>% da ação</th><th class="right" data-sort>% do programa</th><th class="right" data-sort>% da UG</th><th class="right" data-sort>Linhas</th></tr></thead><tbody><tr class="group-row"><td colspan="6"><span class="badge muted">Código P/A 2.285</span> <strong>Remuneração do Magistério Educação Infantil: Pré-Escola</strong> · total R$ 47.111.871,49 · 43,0% do programa · 17,3% da UG</td></tr><tr><td class="left"><strong>3.1.90.11.00</strong><span class="cell-note">Vencimentos e vantagens fixas — pessoal civil</span></td><td class="right" data-value="34991993.68">R$ 34.991.993,68</td><td class="right" data-value="74.274259487712">74,3%</td><td class="right" data-value="31.946293360167505">31,9%</td><td class="right" data-value="12.819451481865233">12,8%</td><td class="right" data-value="33">33</td></tr><tr><td class="left"><strong>3.1.90.04.00</strong><span class="cell-note">Contratação por tempo determinado</span></td><td class="right" data-value="12119877.81">R$ 12.119.877,81</td><td class="right" data-value="25.72574051228803">25,7%</td><td class="right" data-value="11.06496461871916">11,1%</td><td class="right" data-value="4.440163854974441">4,4%</td><td class="right" data-value="18">18</td></tr><tr class="group-row"><td colspan="6"><span class="badge muted">Código P/A 2.284</span> <strong>Manutenção e Desenvolvimento da Educação Infantil: Pré-Escola</strong> · total R$ 14.457.724,59 · 13,2% do programa · 5,3% da UG</td></tr><tr><td class="left"><strong>3.3.90.46.00</strong><span class="cell-note">Auxílio-alimentação</span></td><td class="right" data-value="12586240.15">R$ 12.586.240,15</td><td class="right" data-value="87.05547039335323">87,1%</td><td class="right" data-value="11.490734818097357">11,5%</td><td class="right" data-value="4.611017492102758">4,6%</td><td class="right" data-value="75">75</td></tr><tr><td class="left"><strong>3.3.90.49.00</strong><span class="cell-note">Auxílio-transporte</span></td><td class="right" data-value="923708.4999999999">R$ 923.708,50</td><td class="right" data-value="6.389030958847444">6,4%</td><td class="right" data-value="0.8433089863395369">0,8%</td><td class="right" data-value="0.33840416203277357">0,3%</td><td class="right" data-value="47">47</td></tr><tr><td class="left"><strong>3.1.90.04.00</strong><span class="cell-note">Contratação por tempo determinado</span></td><td class="right" data-value="606537.02">R$ 606.537,02</td><td class="right" data-value="4.195245359837084">4,2%</td><td class="right" data-value="0.5537440864878946">0,6%</td><td class="right" data-value="0.2222071703302023">0,2%</td><td class="right" data-value="3">3</td></tr><tr><td class="left"><strong>3.1.90.11.00</strong><span class="cell-note">Vencimentos e vantagens fixas — pessoal civil</span></td><td class="right" data-value="315231.19">R$ 315.231,19</td><td class="right" data-value="2.180365160766975">2,2%</td><td class="right" data-value="0.2877934925374249">0,3%</td><td class="right" data-value="0.11548615899771848">0,1%</td><td class="right" data-value="7">7</td></tr><tr><td class="left"><strong>3.1.90.16.00</strong><span class="cell-note">Outras despesas variáveis — pessoal civil</span></td><td class="right" data-value="26007.73">R$ 26.007,73</td><td class="right" data-value="0.17988812719526287">0,2%</td><td class="right" data-value="0.02374401926938246">0,0%</td><td class="right" data-value="0.009528031924600269">0,0%</td><td class="right" data-value="1">1</td></tr><tr class="group-row"><td colspan="6"><span class="badge muted">Código P/A 2.365</span> <strong>Remuneração do Magistério Educação Infantil: Creche</strong> · total R$ 7.611.921,80 · 6,9% do programa · 2,8% da UG</td></tr><tr><td class="left"><strong>3.1.90.11.00</strong><span class="cell-note">Vencimentos e vantagens fixas — pessoal civil</span></td><td class="right" data-value="6926584.159999999">R$ 6.926.584,16</td><td class="right" data-value="90.99652284919688">91,0%</td><td class="right" data-value="6.323694830961382">6,3%</td><td class="right" data-value="2.5375807502196666">2,5%</td><td class="right" data-value="17">17</td></tr><tr><td class="left"><strong>3.1.90.04.00</strong><span class="cell-note">Contratação por tempo determinado</span></td><td class="right" data-value="685337.6400000001">R$ 685.337,64</td><td class="right" data-value="9.0034771508031">9,0%</td><td class="right" data-value="0.6256859068512746">0,6%</td><td class="right" data-value="0.2510760805748986">0,3%</td><td class="right" data-value="9">9</td></tr><tr class="group-row"><td colspan="6"><span class="badge muted">Código P/A 2.330</span> <strong>Manutenção e Desenvolvimento da Educação Infantil: Creche</strong> · total R$ 1.364.236,41 · 1,2% do programa · 0,5% da UG</td></tr><tr><td class="left"><strong>3.3.90.46.00</strong><span class="cell-note">Auxílio-alimentação</span></td><td class="right" data-value="1317586.67">R$ 1.317.586,67</td><td class="right" data-value="96.58052375247776">96,6%</td><td class="right" data-value="1.2029040320536035">1,2%</td><td class="right" data-value="0.4827029446702099">0,5%</td><td class="right" data-value="31">31</td></tr><tr><td class="left"><strong>3.3.90.49.00</strong><span class="cell-note">Auxílio-transporte</span></td><td class="right" data-value="46649.740000000005">R$ 46.649,74</td><td class="right" data-value="3.4194762475222316">3,4%</td><td class="right" data-value="0.04258935037666423">0,0%</td><td class="right" data-value="0.01709031168788288">0,0%</td><td class="right" data-value="12">12</td></tr></tbody></table></div></div></div></div></details><details class="programa" id="prog-6025" data-codigo="6025" data-status="compartilhado" data-busca="6025 GESTAO DA EDUCACAO DE JOVENS E ADULTOS"><summary><span class="prog-id">6025</span><span class="prog-heading"><h3>Gestão da Educação de Jovens e Adultos</h3><span class="prog-badges"><span class="badge info">Compartilhado</span></span></span><span class="prog-value"><strong class="num">R$ 580,4 mil</strong><span>0,2% da UG · 10 linhas</span></span><span class="prog-toggle" aria-hidden="true">⌄</span></summary><div class="prog-body"><div class="ficha"><div><span>Eixo</span><strong>Avanço Social</strong></div><div><span>Tipo</span><strong>Duração Continuada</strong></div><div><span>Natureza</span><strong>Finalístico</strong></div><div><span>Período</span><strong>01/01/2026 - 31/12/2029</strong></div><div><span>Órgão no PPA</span><strong>FUNDO MUNICIPAL DE EDUCAÇÃO/FUNDEB</strong></div><div><span>Público-alvo</span><strong>Alunos com mais de 15 anos completos</strong></div></div><div class="objetivo"><strong>Objetivo:</strong> Oferecer a Educação de Jovens e Adultos - EJA, aqueles que não tiveram oportunidade de acesso e continuidades de estudos no Ensino Fundamental na idade própria.</div><div class="note info"><strong>Programa compartilhado:</strong> dono provisório UG 004. Indicadores e metas são do programa; esta UG reporta a parte executada (R$ 580.411,61).</div><div class="chips"><span class="badge muted">2 indicador(es)</span><span class="badge muted">2 ação(ões)</span><span class="badge info">2 meta(s) percentual(is)</span><span class="badge ok">0 meta(s) física(s)</span></div><div class="panel"><h4>Indicadores do programa</h4><div class="table-block"><div class="table-tools no-print"><input type="search" data-busca-tabela="ind-6025" placeholder="Buscar indicador..." aria-label="Buscar indicador..."></div><div class="table-wrap"><table class="table table-compact" id="ind-6025" data-sortable><thead><tr><th class="center" data-sort>Nº</th><th class="left" data-sort>Indicador</th><th class="right" data-sort>Referência atual</th><th class="right" data-sort>Resultado 2026</th><th class="right" data-sort>Referência 2029</th><th class="center" data-sort>Direção</th><th class="center" data-sort>Tendência</th><th class="center" data-sort>Status</th><th class="center" data-sort>Evidência</th></tr></thead><tbody><tr><td class="center" data-value="1"><strong>1</strong></td><td class="left"><span class="cell-title">Número de Centros de educação de Jovens e Adultos</span><span class="cell-note">Estatística SEMED</span></td><td class="right">3</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right">3</td><td class="center">→ Manter</td><td class="center"><span class="badge pending">A apurar</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="2"><strong>2</strong></td><td class="left"><span class="cell-title">Número de alunos da Educação de Jovens e Adultos</span><span class="cell-note">Estatística SEMED</span></td><td class="right">1.527</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right">2.400</td><td class="center">↑ Aumentar</td><td class="center"><span class="badge pending">A apurar</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr></tbody></table></div></div></div><div class="panel"><h4>Ações do programa</h4><div class="table-block"><div class="table-tools no-print"><input type="search" data-busca-tabela="acao-6025" placeholder="Buscar ação..." aria-label="Buscar ação..."></div><div class="table-wrap"><table class="table table-compact" id="acao-6025" data-sortable><thead><tr><th class="center" data-sort>Nº</th><th class="left" data-sort>Ação</th><th class="right" data-sort>Meta 2026</th><th class="right" data-sort>Meta 2027-2029</th><th class="right" data-sort>Resultado 2026</th><th class="right" data-sort>% da meta</th><th class="center" data-sort>Status</th><th class="center" data-sort>Evidência</th></tr></thead><tbody><tr><td class="center" data-value="70"><strong>70</strong></td><td class="left"><span class="cell-title">Remuneração do Magistério da educação de Jovens e Adultos - MAG</span><span class="cell-note">Atividade · Atividades Mantidas</span></td><td class="right"><span class="badge info">25% do plano</span><span class="cell-note">total 4 anos: 100%</span></td><td class="right">75 %</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right" data-value=""><span class="pending">—</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr><tr><td class="center" data-value="71"><strong>71</strong></td><td class="left"><span class="cell-title">Manutenção e Desenvolvimento da Educação de Jovens e Adultos</span><span class="cell-note">Atividade · Atividades Mantidas</span></td><td class="right"><span class="badge info">25% do plano</span><span class="cell-note">total 4 anos: 100%</span></td><td class="right">75 %</td><td class="right"><span class="pending">Aguardando devolutiva</span></td><td class="right" data-value=""><span class="pending">—</span></td><td class="center"><span class="badge pending">Pendente</span></td><td class="center"><span class="pending">—</span></td></tr></tbody></table></div></div></div><div class="exec-compact"><span>Liquidado <strong>R$ 580.411,61</strong></span><span>0,2% da UG</span><span>73,3% do programa</span><span>10 linhas</span><span>Principal UO: FUNDEB (R$ 580,4 mil)</span><span> · Outras UGs: UG 004 (R$ 211,3 mil)</span><a href="#loa-6025">Ver execução LOA</a></div><div class="panel" id="loa-6025"><h4>Execução LOA — projeto/atividade e natureza</h4><p class="small muted">Código da ação orçamentária (projeto/atividade) e sua natureza/elemento. Não há crosswalk com a ação do PPA; o elo disponível é o programa.</p><div class="table-block"><div class="table-tools no-print"><input type="search" data-busca-tabela="loa-detalhe-6025" placeholder="Buscar natureza ou ação..." aria-label="Buscar natureza ou ação..."></div><div class="table-wrap"><table class="table table-compact" id="loa-detalhe-6025" data-sortable><thead><tr><th class="left" data-sort>Natureza / Elemento</th><th class="right" data-sort>Liquidado</th><th class="right" data-sort>% da ação</th><th class="right" data-sort>% do programa</th><th class="right" data-sort>% da UG</th><th class="right" data-sort>Linhas</th></tr></thead><tbody><tr class="group-row"><td colspan="6"><span class="badge muted">Código P/A 2.283</span> <strong>Manutenção e desenvolvimento da Educação de Jovens e Adultos</strong> · total R$ 580.411,61 · 73,3% do programa · 0,2% da UG</td></tr><tr><td class="left"><strong>3.1.90.11.00</strong><span class="cell-note">Vencimentos e vantagens fixas — pessoal civil</span></td><td class="right" data-value="580411.61">R$ 580.411,61</td><td class="right" data-value="100.0">100,0%</td><td class="right" data-value="73.31432344258178">73,3%</td><td class="right" data-value="0.2126360258849442">0,2%</td><td class="right" data-value="10">10</td></tr></tbody></table></div></div></div></div></details></section><section id="execucao" class="section"><div class="section-head"><span class="eyebrow">Execução orçamentária</span><h2>Execução 2026 da UG</h2><p>Visão da UG por programa, UO, fonte e mês. O detalhe por ação LOA/projeto-atividade e natureza está no cartão do programa.</p></div><div class="mini-kpis"><div class="mini"><span>Liquidado</span><strong>R$ 272.960.147,55</strong></div><div class="mini"><span>Realizado</span><strong>R$ 274.451.806,70</strong></div><div class="mini"><span>Anulado</span><strong>R$ -1.491.659,15</strong></div><div class="mini"><span>Linhas</span><strong>526</strong></div></div><div class="card" style="margin-top:12px"><h3>Por programa do PPA</h3><div class="table-block"><div class="table-tools no-print"><input type="search" data-busca-tabela="tabela-programas-ug" placeholder="Buscar programa..." aria-label="Buscar programa..."></div><div class="table-wrap"><table class="table " id="tabela-programas-ug" data-sortable><thead><tr><th class="left" data-sort>Código</th><th class="left" data-sort>Programa</th><th class="right" data-sort>Liquidado</th><th class="right" data-sort>% da UG</th><th class="right" data-sort>Linhas</th><th class="center" data-sort>Situação</th></tr></thead><tbody><tr><td class="nowrap"><a href="#prog-6024"><strong>6024</strong></a></td><td class="left">Gestão do Ensino Fundamental</td><td class="right" data-value="201833981.65000007">R$ 201.833.981,65</td><td class="right" data-value="73.9426555347347">73,9%</td><td class="right" data-value="263">263</td><td class="center"><span class="badge info">Compartilhado</span></td></tr><tr><td class="nowrap"><a href="#prog-6023"><strong>6023</strong></a></td><td class="left">Gestão da Educação Infantil: Creche e Pré-escola</td><td class="right" data-value="70545754.28999995">R$ 70.545.754,29</td><td class="right" data-value="25.844708439380366">25,8%</td><td class="right" data-value="253">253</td><td class="center"><span class="badge info">Compartilhado</span></td></tr><tr><td class="nowrap"><a href="#prog-6025"><strong>6025</strong></a></td><td class="left">Gestão da Educação de Jovens e Adultos</td><td class="right" data-value="580411.61">R$ 580.411,61</td><td class="right" data-value="0.2126360258849442">0,2%</td><td class="right" data-value="10">10</td><td class="center"><span class="badge info">Compartilhado</span></td></tr></tbody></table></div></div></div><div class="note" style="margin-top:12px"><strong>UO única:</strong> FUNDEB · R$ 272.960.147,55 (100,0% da UG) · 526 linhas.</div><div class="note" style="margin-top:12px"><strong>Detalhamento:</strong> a execução por ação LOA (projeto/atividade) e natureza/elemento está no cartão de cada programa, junto às ações do PPA.</div><div class="grid grid-2" style="margin-top:12px"><div class="card"><h3>Evolução mensal</h3><div class="bars"><div class="bar-row"><div class="bar-label" title="set/26">set/26</div><div class="bar-track"><span class="bar-fill" style="width:100.00%"></span></div><div class="bar-value num">R$ 33,88 mi</div></div><div class="bar-row"><div class="bar-label" title="jan/26">jan/26</div><div class="bar-track"><span class="bar-fill" style="width:98.80%"></span></div><div class="bar-value num">R$ 33,48 mi</div></div><div class="bar-row"><div class="bar-label" title="abr/26">abr/26</div><div class="bar-track"><span class="bar-fill" style="width:94.22%"></span></div><div class="bar-value num">R$ 31,92 mi</div></div><div class="bar-row"><div class="bar-label" title="ago/26">ago/26</div><div class="bar-track"><span class="bar-fill" style="width:91.62%"></span></div><div class="bar-value num">R$ 31,05 mi</div></div><div class="bar-row"><div class="bar-label" title="jun/26">jun/26</div><div class="bar-track"><span class="bar-fill" style="width:90.75%"></span></div><div class="bar-value num">R$ 30,75 mi</div></div><div class="bar-row"><div class="bar-label" title="mai/26">mai/26</div><div class="bar-track"><span class="bar-fill" style="width:90.65%"></span></div><div class="bar-value num">R$ 30,71 mi</div></div><div class="bar-row"><div class="bar-label" title="mar/26">mar/26</div><div class="bar-track"><span class="bar-fill" style="width:86.28%"></span></div><div class="bar-value num">R$ 29,24 mi</div></div><div class="bar-row"><div class="bar-label" title="fev/26">fev/26</div><div class="bar-track"><span class="bar-fill" style="width:82.47%"></span></div><div class="bar-value num">R$ 27,95 mi</div></div><div class="bar-row"><div class="bar-label" title="jul/26">jul/26</div><div class="bar-track"><span class="bar-fill" style="width:46.69%"></span></div><div class="bar-value num">R$ 15,82 mi</div></div><div class="bar-row"><div class="bar-label" title="out/26">out/26</div><div class="bar-track"><span class="bar-fill" style="width:24.07%"></span></div><div class="bar-value num">R$ 8,16 mi</div></div></div></div><div class="card"><h3>Por fonte de recurso</h3><div class="table-block"><div class="table-tools no-print"><input type="search" data-busca-tabela="tabela-fontes" placeholder="Buscar fonte..." aria-label="Buscar fonte..."></div><div class="table-wrap"><table class="table table-compact" id="tabela-fontes" data-sortable><thead><tr><th class="left" data-sort>Fonte de recurso</th><th class="right" data-sort>Liquidado</th><th class="right" data-sort>% da UG</th></tr></thead><tbody><tr><td class="left"><strong>15401070</strong><span class="cell-note">Transferências do FUNDEB — Impostos 70%</span></td><td class="right" data-value="131067062.48000002">R$ 131.067.062,48</td><td class="right" data-value="48.01692249085246">48,0%</td></tr><tr><td class="left"><strong>15411070</strong><span class="cell-note">Transferência do FUNDEB 70% — Complementação da União — VAAF</span></td><td class="right" data-value="91403212.34">R$ 91.403.212,34</td><td class="right" data-value="33.485918424504455">33,5%</td></tr><tr><td class="left"><strong>15400000</strong><span class="cell-note">Transferências do FUNDEB — Impostos</span></td><td class="right" data-value="47213288.820000015">R$ 47.213.288,82</td><td class="right" data-value="17.296769965788368">17,3%</td></tr><tr><td class="left"><strong>25460000</strong><span class="cell-note">Descrição não mapeada</span></td><td class="right" data-value="3276583.91">R$ 3.276.583,91</td><td class="right" data-value="1.2003891188547242">1,2%</td></tr></tbody></table></div></div></div></div><div class="note warn" style="margin-top:12px"><strong>Nota:</strong> a base é de liquidações. O valor exibido é o liquidado líquido (realizado + anulados negativos). Empenhado e pago não estão no Consolidado.</div></section><section id="analise" class="section"><div class="section-head"><span class="eyebrow">Análise crítica</span><h2>Destaques, dificuldades, riscos e recomendações</h2><p>Dificuldades, riscos e recomendações a partir dos alertas da base; a análise qualitativa é preenchida pela UG na devolutiva.</p></div><div class="grid grid-2"><div class="card"><h3>Análise qualitativa (a preencher pela UG)</h3><p><strong>Destaques:</strong> principais entregas, resultados e boas práticas.</p><p><strong>Dificuldades:</strong> restrições, atrasos e causas.</p><p><strong>Riscos:</strong> riscos de não atingir a referência de 2029.</p><p><strong>Recomendações:</strong> próximos passos, parcerias e correções.</p></div><div class="card"><h3>Dificuldades identificadas na base</h3><ul><li>Programa(s) compartilhado(s) que exigem rateio e validação de dono: 6024, 6023, 6025.</li><li>29 indicador(es)/ação(ões) sem resultado 2026 informado; a análise qualitativa depende da devolutiva da UG.</li></ul></div><div class="card"><h3>Riscos</h3><ul><li>Nenhum risco alto ou médio registrado na base.</li></ul></div><div class="card"><h3>Recomendações</h3><ul><li>Validar dono e rateio dos programas compartilhados antes da coleta.</li><li>Solicitar a meta física anual (ou o resultado em % do plano) das ações com meta percentual.</li><li>Priorizar a coleta de resultados, análises e evidências dos itens pendentes.</li><li>Validar o mapa PPA órgão→UG e os códigos oficiais das UOs.</li></ul></div></div><div class="card" style="margin-top:12px"><h3>Análises registradas na camada de resultados</h3><div class="empty">Nenhuma análise qualitativa registrada. Preencher na devolutiva da UG.</div></div></section><section id="evidencias" class="section"><div class="section-head"><span class="eyebrow">Qualidade da informação</span><h2>Resultados e evidências</h2><p>A qualidade das evidências só é avaliável depois da devolutiva das UGs. O checklist completo por programa está na planilha de apoio.</p></div><div class="grid grid-4"><div class="kpi teal"><span class="kpi-label">Itens</span><strong class="kpi-value num">29</strong><span class="kpi-hint">indicadores + ações</span></div><div class="kpi"><span class="kpi-label">Com resultado</span><strong class="kpi-value num">0</strong><span class="kpi-hint">resultados 2026 informados</span></div><div class="kpi green"><span class="kpi-label">Evidências</span><strong class="kpi-value num">0</strong><span class="kpi-hint">arquivos/links registrados</span></div><div class="kpi amber"><span class="kpi-label">Pendentes</span><strong class="kpi-value num">29</strong><span class="kpi-hint">dependem da devolutiva</span></div></div><div class="card" style="margin-top:12px"><h3>Orientação</h3><p>Nenhum resultado de 2026 foi informado na base. O protótipo mostra <strong>Aguardando devolutiva</strong> em cada indicador e ação.</p><p>Quando a coleta for preenchida, o raio-x aceita resultados, análise, status, justificativa, próximos passos e IDs de evidência. Evidências obrigatórias para resultados críticos e metas não atingidas.</p><p>Não incluir dados pessoais ou informações sigilosas nas evidências (LGPD).</p><p class="small muted">Pasta de entrada: <code>PMP_DATA_ROOT/Saida/raiox/entrada</code></p></div><div class="card" style="margin-top:12px"><h3>Evidências registradas</h3><div class="empty">Nenhuma evidência registrada.</div></div></section><section id="alertas" class="section"><div class="section-head"><span class="eyebrow">Exceções e riscos</span><h2>Alertas da UG</h2><p>Programas sem execução, sem indicador, compartilhados, metas percentuais, vínculos provisórios e resultados pendentes.</p></div><div class="grid grid-3"><div class="kpi red"><span class="kpi-label">Alta</span><strong class="kpi-value num">0</strong><span class="kpi-hint">exigem justificativa</span></div><div class="kpi amber"><span class="kpi-label">Média</span><strong class="kpi-value num">0</strong><span class="kpi-hint">conferir na validação</span></div><div class="kpi"><span class="kpi-label">Info</span><strong class="kpi-value num">4</strong><span class="kpi-hint">contexto e pendências</span></div></div><div style="margin-top:12px"><h4>Informação · 4</h4><div class="alert info"><div class="alert-head"><span class="badge info">Info</span><strong>19 de 19 ações usam meta percentual do plano, não meta física anual. A coleta deve informar a meta anual ou o resultado em % do plano.</strong></div></div><div class="alert info"><div class="alert-head"><span class="badge info">Info</span><strong>Nenhum resultado de indicador ou ação foi informado para esta UG; o raio-x está em modo de prévia.</strong></div></div><div class="alert info"><div class="alert-head"><span class="badge info">Info</span><strong>Nenhuma evidência registrada para esta UG.</strong></div></div><div class="alert info"><div class="alert-head"><span class="badge info">Info</span><strong>Programas compartilhados: 6024 (outras UGs: UG 004); 6023 (outras UGs: UG 004); 6025 (outras UGs: UG 004). A parte de cada UG está na seção Execução.</strong></div></div></div></section><section id="qualidade" class="section"><div class="section-head"><span class="eyebrow">Notas técnicas</span><h2>Qualidade dos dados</h2><p>Limitações que afetam a leitura e devem ser resolvidas antes da versão final.</p></div><div class="grid grid-2"><div class="note warn"><strong>UO:</strong> o código da unidade orçamentária no Consolidado não é único. A UG 004, por exemplo, tem duas UOs com código 001. O raio-x usa o nome normalizado da UO como chave e exibe o código apenas como referência.</div><div class="note warn"><strong>Meta das ações:</strong> 277 de 306 ações usam meta 2026 em percentual do plano (ex.: 25%), não em quantidade física. O raio-x classifica a meta e não calcula execução física contra percentual sem a meta anual informada.</div><div class="note warn"><strong>Execução:</strong> o Consolidado é de liquidações (Valor R$), com anulados negativos. Empenhado e pago não estão disponíveis nesta base. O raio-x mostra liquidado líquido.</div><div class="note info"><strong>Resultados:</strong> 0 de 553 indicadores/ações têm resultado 2026 na base. O protótipo usa placeholders; a camada de resultados pode ser alimentada por CSV/XLSX.</div></div></section><section id="metodologia" class="section"><div class="section-head"><span class="eyebrow">Método</span><h2>Como o raio-x foi calculado</h2></div><div class="grid grid-2"><div class="card"><h3>Fontes e chaves</h3><p><strong>PPA 2026-2029:</strong> abas Programas, Indicadores e Ações. O código do programa é a chave dos indicadores e das ações.</p><p><strong>Contas 2026:</strong> <code>despesas_programas_2026_0101-1711.xlsx</code>, aba Consolidado. O vínculo PPA↔contas é o campo <strong>Programa de governo</strong>. Não há vínculo automático entre a ação do PPA e a ação da LOA; a ação LOA é exibida pelo código de <strong>Projeto/Atividade</strong>.</p><p><strong>UO:</strong> a chave é o nome normalizado da unidade orçamentária; o código do Consolidado é exibido como referência e pode se repetir.</p></div><div class="card"><h3>Regras de leitura</h3><p><strong>Execução:</strong> liquidado líquido = valores realizados + anulados (negativos). Não inclui empenhado ou pago. O detalhamento por ação da LOA (projeto/atividade) e natureza/elemento está no cartão de cada programa.</p><p><strong>Indicadores:</strong> o PPA traz referência atual e referência 2029, sem meta anual. A direção é inferida pela variação entre as referências; a tendência compara o resultado com a referência atual.</p><p><strong>Ações:</strong> a meta 2026 pode ser percentual do plano ou quantidade. O % da meta só é calculado quando a meta e o resultado são compatíveis.</p><p><strong>Compartilhados:</strong> o dono é provisório (mapa do DEFINICAO do RAM); cada UG mostra sua parte e o total do programa.</p></div><div class="card"><h3>Escopo desta versão da UG 016</h3><p>Protótipo interno, independente do RAM. Não importa o código nem os artefatos do RAM. A camada de resultados/evidências é opcional e fica em <code>PMP_DATA_ROOT/Saida/raiox/entrada</code>.</p><p>O PDF pode ser gerado pela impressão do HTML no navegador. O raio-x não substitui o RAM oficial nem o resumo executivo de contas.</p></div><div class="card"><h3>Limites e pendências</h3><p>Validar o mapa PPA órgão→UG dos programas sem execução; confirmar o dono e o rateio dos programas compartilhados; obter a fonte de empenhado/pago; definir a meta física anual das ações com meta percentual; validar os resultados e as evidências com as UGs.</p></div></div></section></main><footer class="footer"><div class="wrap"><strong>Raio-X Técnico do PPA 2026-2029</strong> · produto interno da equipe técnica. Não substitui o RAM nem o resumo executivo de contas. Gerado por pmp_raiox 0.1.0.</div></footer><script>
+(function () {
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var normalizar = function (s) {
+    return (s || '').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  };
+  $$('[data-print]').forEach(function (b) {
+    b.addEventListener('click', function () { window.print(); });
+  });
+  var expandir = $('[data-expandir]');
+  if (expandir) {
+    expandir.addEventListener('click', function () {
+      var abrir = expandir.getAttribute('data-expandir') === 'abrir';
+      $$('details.programa').forEach(function (d) { d.open = abrir; });
+      expandir.setAttribute('data-expandir', abrir ? 'recolher' : 'abrir');
+      expandir.textContent = abrir ? 'Recolher programas' : 'Expandir programas';
+    });
+  }
+  var busca = $('#busca-programa');
+  var filtros = $$('[data-filtro-programa]');
+  function aplicarFiltros() {
+    var termo = normalizar(busca ? busca.value : '');
+    var ativo = 'todos';
+    filtros.forEach(function (b) { if (b.classList.contains('ativo')) ativo = b.getAttribute('data-filtro-programa'); });
+    var visiveis = 0;
+    $$('details.programa').forEach(function (d) {
+      var alvo = normalizar((d.getAttribute('data-busca') || '') + ' ' + d.textContent);
+      var status = (d.getAttribute('data-status') || '').split(' ');
+      var okTermo = !termo || alvo.indexOf(termo) >= 0;
+      var okStatus = ativo === 'todos' || status.indexOf(ativo) >= 0;
+      var mostrar = okTermo && okStatus;
+      d.hidden = !mostrar;
+      if (mostrar) visiveis += 1;
+      if (mostrar && termo.length >= 2) d.open = true;
+    });
+    var contador = $('#contador-programas');
+    if (contador) contador.textContent = visiveis + ' programa(s)';
+  }
+  if (busca) busca.addEventListener('input', aplicarFiltros);
+  filtros.forEach(function (b) {
+    b.addEventListener('click', function () {
+      filtros.forEach(function (x) { x.classList.remove('ativo'); });
+      b.classList.add('ativo');
+      aplicarFiltros();
+    });
+  });
+  aplicarFiltros();
+  $$('input[data-busca-tabela]').forEach(function (input) {
+    var tabela = document.getElementById(input.getAttribute('data-busca-tabela'));
+    if (!tabela) return;
+    input.addEventListener('input', function () {
+      var termo = normalizar(input.value);
+      $$('tbody tr', tabela).forEach(function (tr) {
+        tr.hidden = !!termo && normalizar(tr.textContent).indexOf(termo) < 0;
+      });
+    });
+  });
+  $$('table[data-sortable] th[data-sort]').forEach(function (th) {
+    th.addEventListener('click', function () {
+      var tabela = th.closest('table');
+      var tbody = tabela.tBodies[0];
+      var idx = Array.prototype.indexOf.call(th.parentNode.children, th);
+      var dir = th.getAttribute('data-dir') === 'asc' ? -1 : 1;
+      th.setAttribute('data-dir', dir === 1 ? 'asc' : 'desc');
+      var linhas = Array.prototype.slice.call(tbody.rows);
+      linhas.sort(function (a, b) {
+        var ca = a.cells[idx], cb = b.cells[idx];
+        var va = ca ? (ca.getAttribute('data-value') || ca.textContent.trim()) : '';
+        var vb = cb ? (cb.getAttribute('data-value') || cb.textContent.trim()) : '';
+        var na = parseFloat(String(va).replace(/\./g, '').replace(',', '.'));
+        var nb = parseFloat(String(vb).replace(/\./g, '').replace(',', '.'));
+        if (!isNaN(na) && !isNaN(nb)) return (na - nb) * dir;
+        return String(va).localeCompare(String(vb), 'pt-BR') * dir;
+      });
+      linhas.forEach(function (l) { tbody.appendChild(l); });
+    });
+  });
+  function abrirHash() {
+    if (!location.hash) return;
+    var el = document.querySelector(location.hash);
+    if (el && el.tagName === 'DETAILS') el.open = true;
+  }
+  window.addEventListener('hashchange', abrirHash);
+  abrirHash();
+  window.addEventListener('beforeprint', function () {
+    $$('details').forEach(function (d) { d.open = true; });
+  });
+})();
+</script></body></html>
