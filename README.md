@@ -9,3 +9,5 @@ contas 2026 (despesas_programas_2026_0101-1711.xlsx).
 - pdf/ — 35 PDFs por UG + PDF do índice.
 
 Produto interno de diagnóstico; não é o RAM oficial nem o resumo executivo de contas.
+
+- Código: https://github.com/angelojordy-svg/raiox-ppa
